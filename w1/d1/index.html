@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <button onclick="handleClick(1)">Say Hello</button>
+    <button onclick="playClick()">Want to play?</button>
+</body>
+<script>
+    console.log("Hello, World!");
+    var buttonId = 1;
+    var buttonId2 = 1;
+    let message = "Hello, World!";
+    let message2 = "Do you want to play a game?";
+    function handleClick(buttonId) {
+        console.log("Button clicked!");
+        alert(message);
+    }
+    function playClick() {
+        console.log("Button clicked!");
+        confirm(message2);
+        if (confirm(message2) == true) {
+            confirm("Are you sure?");
+        } else {
+            alert("Maybe next time!");
+        }
+        if (confirm("Are you sure?") == true) {
+            alert("Great! Let's play!");
+        } else {
+            alert("Maybe next time!");
+        }
+
+    }
+    let angka1 = 10;
+    let angka2 = 20;
+    let angka3 = 5;
+    let angka4 = 10;
+    console.log(angka1 == angka2);
+    console.log(angka1 != angka2);
+    console.log(angka1 < angka2);
+    console.log(angka1 > angka2);
+    console.log(angka1 <= angka2);
+    console.log((angka1 + angka1) >= angka2);
+    console.log((angka1 + angka3) >= angka2);
+
+</script>
+
+</html>

@@ -1,0 +1,161 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, bold;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #001f3f, #0074D9, #7FDBFF);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    color: #f5faff;
+    line-height: 1.7;
+    /* Lebih nyaman dibaca */
+}
+
+/* Gradient background animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main title */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00c6ff, #7FDBFF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Section box */
+section {
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 14px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+/* Subheading */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #7FDBFF;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(127, 219, 255, 0.4);
+    padding-bottom: 0.5rem;
+}
+
+/* List styling */
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0.6rem 0;
+    font-size: 1rem;
+}
+
+a {
+    color: #e6faff;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.3s, background 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: #001f3f;
+    background: #7FDBFF;
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.9);
+}
+
+/* Nav & hamburger menu (dari sebelumnya) */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    font-weight: 600;
+    color: #f5faff;
+}
+
+.menu a:hover {
+    color: #7FDBFF;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+    }
+
+    #menu-toggle:checked+.menu-icon+.menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #fff;
+    }
+}

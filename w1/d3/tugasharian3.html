@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tugasharian3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="aa72-bg"></div>
+    <h1>Latihan Mandiri Interaktif</h1>
+
+    <!-- Cek kategori usia -->
+    <div class="box">
+        <label>Masukkan usia:</label>
+        <input type="number" id="usia" placeholder="contoh: 15">
+        <button onclick="cekUsia()">Cek Kategori</button>
+        <div class="output" id="hasilUsia"></div>
+    </div>
+
+    <!-- For loop cetak angka -->
+    <div class="box">
+        <button onclick="cetakAngka()">Cetak Angka 1-10</button>
+        <div class="output" id="hasilAngka"></div>
+    </div>
+
+    <!-- Switch hari -->
+    <div class="box">
+        <label>Masukkan angka (1-7) untuk hari:</label>
+        <input type="number" id="hari" placeholder="contoh: 3">
+        <button onclick="cekHari()">Tampilkan Hari</button>
+        <div class="output" id="hasilHari"></div>
+    </div>
+</body>
+<script>
+    function cekUsia() {
+        let usia = document.getElementById("usia").value;
+        let hasil = "";
+        if (usia >= 0 && usia <= 12) {
+            hasil = "Kategori: Anak-anak";
+        } else if (usia >= 13 && usia <= 17) {
+            hasil = "Kategori: Remaja";
+        } else if (usia >= 18) {
+            hasil = "Kategori: Dewasa";
+        } else {
+            hasil = "Usia tidak valid";
+        }
+        document.getElementById("hasilUsia").innerText = hasil;
+    }
+
+    /* function cekKategoriUsia(usia) {
+         if (usia >= 0 && usia <= 12) {
+             console.log("Kategori: Anak-anak");
+         } else if (usia >= 13 && usia <= 17) {
+             console.log("Kategori: Remaja");
+         } else if (usia >= 18) {
+             console.log("Kategori: Dewasa");
+         } else {
+             console.log("Usia tidak valid.");
+         }
+     }*/
+
+    function cetakAngka() {
+        let output = "";
+        for (let i = 1; i <= 10; i++) {
+            output += i + " ";
+        }
+        document.getElementById("hasilAngka").innerText = output;
+    }
+    /*
+        function namaHari(angka) {
+            switch (angka) {
+                case 1:
+                    console.log("Senin");
+                    break;
+                case 2:
+                    console.log("Selasa");
+                    break;
+                case 3:
+                    console.log("Rabu");
+                    break;
+                case 4:
+                    console.log("Kamis");
+                    break;
+                case 5:
+                    console.log("Jumat");
+                    break;
+                case 6:
+                    console.log("Sabtu");
+                    break;
+                case 7:
+                    console.log("Minggu");
+                    break;
+                default:
+                    console.log("Angka tidak valid");
+            }
+        }
+    
+        cekKategoriUsia(15);   // output: Remaja
+        cetakAngka();          // output: 1 sampai 10
+        namaHari(5);           // output: Jumat
+    */
+    function cekHari() {
+        let angka = parseInt(document.getElementById("hari").value);
+        let namaHari = "";
+        switch (angka) {
+            case 1: namaHari = "Senin"; break;
+            case 2: namaHari = "Selasa"; break;
+            case 3: namaHari = "Rabu"; break;
+            case 4: namaHari = "Kamis"; break;
+            case 5: namaHari = "Jumat"; break;
+            case 6: namaHari = "Sabtu"; break;
+            case 7: namaHari = "Minggu"; break;
+            default: namaHari = "Angka tidak valid";
+        }
+        document.getElementById("hasilHari").innerText = "Hari: " + namaHari;
+    }
+</script>
+
+</html>

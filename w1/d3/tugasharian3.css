@@ -73,7 +73,7 @@ h1 {
     width: 320px;
     max-width: 90%;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 

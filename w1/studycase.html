@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Case</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case 1</h2>
+                <pre>✅ Study Case
+Buat variabel nama, umur, status.
+Ubah nilai umur setelah deklarasi.
+Coba deklarasi pakai const lalu ubah nilainya → error.
+Coba bikin variabel tanpa var/let/const.
+Hitung saldo akhir: saldoAwal - pengeluaran.
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case kedua -->
+                <h2>Study Case 2</h2>
+                <pre>✅ Study Case
+Buat variabel: judulBuku, jumlahHalaman, tersedia.
+Simulasikan lampu nyala/mati dengan boolean.
+Buat variabel uangDompet = null.
+Buat variabel tanpa nilai → hasilnya undefined.
+Gabungkan string dengan variabel.</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 3</h2>
+                <pre>✅ Study Case
+Hitung luas segitiga (alas × tinggi ÷ 2).
+Cek apakah umur ≥ 17.
+Bandingkan == dan ===.
+Simulasi belanja: cek saldo cukup/tidak.
+Cek syarat lomba: umur ≥ 18 dan punyaKTP.</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 4</h2>
+                <pre>✅ Study Case
+Tampilkan biodata pakai console.log().
+Buat array buah lalu tampilkan dengan console.table().
+Minta nama lewat prompt(), lalu alert() sapa user.
+Konfirmasi hapus data pakai confirm().
+Jika variabel user kosong → tampilkan console.error().</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
+
+</body>
+<script>
+    // Deklarasi variabel dengan let
+    let nama = "Rayhan";      // variabel nama
+    let umur = 19;          // variabel umur
+    let status = "Pelajar"; // variabel status
+
+    console.log("Nama:", nama);
+    console.log("Umur sebelum diubah:", umur);
+    console.log("Status:", status);
+
+    // Ubah nilai umur setelah deklarasi
+    umur = 21;
+    console.log("Umur setelah diubah:", umur);
+
+    // Deklarasi dengan const
+    const kota = "Jakarta";
+    console.log("Kota:", kota);
+
+    // Jika mencoba ubah nilai const → ERROR
+    // kota = "Bandung"; // ❌ TypeError: Assignment to constant variable
+
+    // Variabel tanpa var/let/const (secara otomatis jadi global)
+    // Tidak direkomendasikan
+    saldoAwal = 500000;
+    pengeluaran = 120000;
+    saldoAkhir = saldoAwal - pengeluaran;
+
+    console.log("Saldo Awal:", saldoAwal);
+    console.log("Pengeluaran:", pengeluaran);
+    console.log("Saldo Akhir:", saldoAkhir);
+    // ✅ Study Case 1
+    let judulBuku = "Belajar JavaScript";
+    let jumlahHalaman = 200;
+    let tersedia = true;
+
+    console.log("Judul Buku:", judulBuku);
+    console.log("Jumlah Halaman:", jumlahHalaman);
+    console.log("Tersedia:", tersedia);
+
+    // Simulasi lampu nyala/mati dengan boolean
+    let lampuNyala = true;
+    console.log("Lampu nyala?", lampuNyala);
+    lampuNyala = false;
+    console.log("Lampu nyala?", lampuNyala);
+
+    // Variabel uangDompet = null
+    let uangDompet = null;
+    console.log("Uang di dompet:", uangDompet);
+
+    // Variabel tanpa nilai → undefined
+    let belumAda;
+    console.log("Belum ada nilai:", belumAda);
+
+    // Gabungkan string dengan variabel
+    let namaUser = "Rhan";
+    let sapaan = "Halo " + namaUser + ", selamat belajar!";
+    console.log(sapaan);
+
+
+    // ✅ Study Case 2
+    // Hitung luas segitiga (alas × tinggi ÷ 2)
+    let alas = 10;
+    let tinggi = 5;
+    let luasSegitiga = (alas * tinggi) / 2;
+    console.log("Luas Segitiga:", luasSegitiga);
+
+    // Cek apakah umur ≥ 17
+    let Umur = 16;
+    console.log("Umur >= 17?", umur >= 17);
+
+    // Bandingkan == dan ===
+    let angkaString = "10";
+    let angkaNumber = 10;
+    console.log("== :", angkaString == angkaNumber);   // true (hanya cek nilai)
+    console.log("=== :", angkaString === angkaNumber); // false (cek nilai & tipe)
+
+    // Simulasi belanja: cek saldo cukup/tidak
+    let saldo = 50000;
+    let hargaBarang = 75000;
+    if (saldo >= hargaBarang) {
+        console.log("Saldo cukup, transaksi berhasil!");
+    } else {
+        console.log("Saldo tidak cukup!");
+    }
+
+    // Cek syarat lomba: umur ≥ 18 dan punyaKTP
+    umur = 19;
+    let punyaKTP = true;
+    if (umur >= 18 && punyaKTP) {
+        console.log("Boleh ikut lomba!");
+    } else {
+        console.log("Tidak memenuhi syarat lomba.");
+    }
+
+
+    // ✅ Study Case 3
+    // Tampilkan biodata pakai console.log()
+    let biodata = {
+        nama: "Rehan",
+        umur: 20,
+        status: "Pelajar",
+    };
+    console.log("Biodata:", biodata);
+
+    // Buat array buah lalu tampilkan dengan console.table()
+    let buah = ["Apel", "Jeruk", "Mangga", "Pisang"];
+    console.table(buah);
+
+    // Minta nama lewat prompt(), lalu alert() sapa user
+    // (Note: prompt & alert hanya bisa jalan di browser, bukan di Node.js)
+    let user = prompt("Masukkan nama Anda:");
+    alert("Halo " + user + "! Selamat datang.");
+
+    // Konfirmasi hapus data pakai confirm()
+    let konfirmasi = confirm("Apakah Anda yakin ingin menghapus data?");
+    if (konfirmasi) {
+        console.log("Data berhasil dihapus.");
+    } else {
+        console.log("Data batal dihapus.");
+    }
+
+    // Jika variabel user kosong → tampilkan console.error()
+    if (!user) {
+        console.error("Nama user tidak boleh kosong!");
+    }
+
+</script>
+
+</html>

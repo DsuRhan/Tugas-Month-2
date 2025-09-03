@@ -23,33 +23,29 @@
     left: 0;
     width: 100%;
     height: 200%;
-    background-image: url("../../assets/aa72-background.png");
+    background-image: url("../../assets/aa72-background-2.png");
     background-size: cover;
     background-position: 20% 25%;
     /* fokus wajah */
     background-repeat: no-repeat;
     z-index: -1;
     /* taruh di belakang konten */
-    opacity: 0.15;
+    opacity: 0.1;
     /* opsional, biar gradient masih kelihatan */
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-
-    /* Gradient animasi tetap di body */
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg) no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    padding: 20px;
     background: linear-gradient(135deg, #001f3f, #0074D9, #7FDBFF);
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
 
-    color: #fff;
-    position: relative;
 }
 
 /* Heading */
@@ -72,6 +68,7 @@ h1 {
     animation: neonGlow 3s ease-in-out infinite alternate;
     position: relative;
     overflow: hidden;
+
 }
 
 @keyframes neonGlow {
@@ -88,21 +85,9 @@ h1 {
     }
 }
 
-/* Paragraph styling */
-pre {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.6;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
 /* Scanline hologram effect */
 h1::after,
-pre::after {
+.card::after {
     content: "";
     position: absolute;
     top: -100%;
@@ -110,8 +95,8 @@ pre::after {
     width: 100%;
     height: 300%;
     background: repeating-linear-gradient(to bottom,
-            rgba(255, 255, 255, 0.06) 0px,
             rgba(255, 255, 255, 0.06) 1px,
+            rgba(255, 255, 255, 0.06) 2px,
             transparent 2px,
             transparent 4px);
     animation: scanline 6s linear infinite;

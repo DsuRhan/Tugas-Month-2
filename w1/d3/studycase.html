@@ -86,7 +86,301 @@
 
 </body>
 <script>
+    // Studi kasus 1
+    console.warn("Output : Studi Kasus 1 :");
 
+    // 1. Menentukan apakah angka ganjil atau genap.
+    let angka = 4;
+    if (angka % 2 === 0) {
+        console.log(angka + " adalah angka genap.");
+    } else {
+        console.log(angka + " adalah angka ganjil.");
+    }
+
+    // 2. Menentukan apakah seseorang boleh masuk bioskop (usia > 17).
+    let usia = 18;
+    if (usia > 17) {
+        console.log("Anda boleh masuk bioskop.");
+    } else {
+        console.log("Anda tidak boleh masuk bioskop.");
+    }
+
+    // 3. Menentukan apakah suhu termasuk dingin, normal, atau panas.
+    let suhu = 30;
+    if (suhu < 20) {
+        console.log("Suhu dingin.");
+    } else if (suhu >= 20 && suhu <= 30) {
+        console.log("Suhu normal.");
+    } else {
+        console.log("Suhu panas.");
+    }
+
+    // 4. Mengecek login dengan username dan password.
+    let username = "user";
+    let password = "pass";
+    if (username === "user" && password === "pass") {
+        console.log("Login berhasil.");
+    } else {
+        console.log("Login gagal.");
+    }
+
+    // 5. Mengecek apakah nilai ujian lulus atau tidak.
+    let nilai = 75;
+    if (nilai >= 60) {
+        console.log("Selamat, Anda lulus ujian.");
+    } else {
+        console.log("Maaf, Anda tidak lulus ujian.");
+    }
+    // Studi kasus 2
+    console.warn("Output : Studi Kasus 2 :");
+
+    // 1.Menampilkan nama bulan dari angka (1–12).
+    let bulan = 5;
+    switch (bulan) {
+        case 1:
+            console.log("Januari");
+            break;
+        case 2:
+            console.log("Februari");
+            break;
+        case 3:
+            console.log("Maret");
+            break;
+        case 4:
+            console.log("April");
+            break;
+        case 5:
+            console.log("Mei");
+            break;
+        case 6:
+            console.log("Juni");
+            break;
+        case 7:
+            console.log("Juli");
+            break;
+        case 8:
+            console.log("Agustus");
+            break;
+        case 9:
+            console.log("September");
+            break;
+        case 10:
+            console.log("Oktober");
+            break;
+        case 11:
+            console.log("November");
+            break;
+        case 12:
+            console.log("Desember");
+            break;
+        default:
+            console.log("Bulan tidak valid.");
+    }
+
+    // 2.Menampilkan menu makanan berdasarkan pilihan nomor.
+    const menu = 2;
+    switch (menu) {
+        case 1:
+            console.log("Menu 1: Nasi Goreng");
+            break;
+        case 2:
+            console.log("Menu 2: Mie Ayam");
+            break;
+        case 3:
+            console.log("Menu 3: Sate Ayam");
+            break;
+        default:
+            console.log("Menu tidak valid.");
+    }
+
+    // 3.Menentukan jenis kelamin (L/P).
+    const jenisKelamin = "L";
+    switch (jenisKelamin) {
+        case "L":
+            console.log("Jenis Kelamin: Laki-laki");
+            break;
+        case "P":
+            console.log("Jenis Kelamin: Perempuan");
+            break;
+        default:
+            console.log("Jenis Kelamin tidak valid.");
+    }
+
+    // 4.Menentukan tingkat pendidikan (SD, SMP, SMA).
+    const tingkatPendidikan = "SMA";
+    switch (tingkatPendidikan) {
+        case "SD":
+            console.log("Tingkat Pendidikan: Sekolah Dasar");
+            break;
+        case "SMP":
+            console.log("Tingkat Pendidikan: Sekolah Menengah Pertama");
+            break;
+        case "SMA":
+            console.log("Tingkat Pendidikan: Sekolah Menengah Atas");
+            break;
+        default:
+            console.log("Tingkat Pendidikan tidak valid.");
+    }
+
+    // 5.Menentukan status lampu lalu lintas (Merah, Kuning, Hijau).
+    const lampuLaluLintas = "Hijau";
+    switch (lampuLaluLintas) {
+        case "Merah":
+            console.log("Lampu Lalu Lintas: Merah (Berhenti)");
+            break;
+        case "Kuning":
+            console.log("Lampu Lalu Lintas: Kuning (Bersiap)");
+            break;
+        case "Hijau":
+            console.log("Lampu Lalu Lintas: Hijau (Jalan)");
+            break;
+        default:
+            console.log("Status Lampu Lalu Lintas tidak valid.");
+    }
+    // Studi kasus 3
+    console.warn("Output : Studi Kasus 3 :");
+
+    // 1.Cetak angka 1 sampai 100.
+    for (let i = 1; i <= 100; i++) {
+        console.log(i);
+    }
+    // 2.Cetak semua bilangan genap dari 1 sampai 50.
+    for (let i = 1; i <= 50; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+
+    // 3.Hitung jumlah dari angka 1 sampai 10.
+    let total = 0;
+    for (let i = 1; i <= 10; i++) {
+        total += i;
+    }
+    console.log("Jumlah dari 1 sampai 10 adalah: " + total);
+
+    // 4.Buat tabel perkalian 5.
+    console.log("=====Tabel Perkalian 5=====");
+    for (let i = 1; i <= 10; i++) {
+        console.log("5 x " + i + " = " + (5 * i));
+    }
+    // 5.Cetak bintang membentuk segitiga.
+    for (let i = 1; i <= 5; i++) {
+        let bintang = "";
+        for (let j = 1; j <= i; j++) {
+            bintang += "*";
+        }
+        console.log(bintang);
+    }
+    // Studi kasus 4
+    console.warn("Output : Studi Kasus 4 :");
+    // 1.Terus minta password sampai benar.
+    let passWord = 1990;
+    while (true) {
+        let input = prompt("Masukkan password  (clue: 1990):");
+        if (input == passWord) {
+            console.log("Password benar!");
+            break;
+        } else {
+            console.log("Password salah, coba lagi.");
+        }
+    }
+    // 2.Jalan terus sampai bensin habis.
+    let bensin = 5; // misal bensin awal 5 liter
+    while (true) {
+        if (bensin > 0) {
+            console.log("Bensin tersisa: " + bensin + " liter");
+            bensin -= 1; // mengurangi bensin setiap kali "jalan"
+        } else {
+            console.log("Bensin habis!");
+            break;
+        }
+    }
+    // 3.Ulangi lempar dadu sampai dapat angka 6.
+    while (true) {
+        let dadu = Math.floor(Math.random() * 6) + 1; // lempar dadu (1-6)
+        console.log("Hasil lemparan dadu: " + dadu);
+        if (dadu === 6) {
+            console.log("Dapat angka 6! Berhenti, jangan lanjyut.");
+            break;
+        }
+    }
+    // 4.Terus tambah uang tabungan sampai cukup untuk beli barang.
+    let tabungan = 0;
+    while (tabungan < 100) {
+        tabungan += 10;
+        console.log("Tabungan saat ini: " + tabungan);
+    }
+    console.log("Tabungan cukup untuk beli barang.");
+
+    // 5.Ulangi proses input sampai user mengetik "stop".
+    while (true) {
+        let input = prompt("Masukkan sesuatu (ketik 'stop' untuk berhenti):");
+        if (input === "stop") {
+            console.log("Proses dihentikan.");
+            break;
+        } else {
+            console.log("Anda memasukkan: " + input);
+        }
+    }
+    // Studi kasus 5
+    console.warn("Output : Studi Kasus 5 :");
+    // 1.Menampilkan menu minimal sekali walau input salah.
+    while (true) {
+        let menu = prompt("Pilih menu (1. Nasi Goreng, 2. Mie Ayam):");
+        if (menu === "1") {
+            console.log("Anda memilih Nasi Goreng.");
+            break;
+        } else if (menu === "2") {
+            console.log("Anda memilih Mie Ayam.");
+            break;
+        } else {
+            console.log("Menu tidak valid, silakan coba lagi.");
+        }
+    }
+    // 2.Meminta user memasukkan angka minimal sekali.
+    while (true) {
+        let input = prompt("Masukkan angka:");
+        let angka = Number(input);
+        if (!isNaN(angka)) {
+            console.log("Anda memasukkan angka: " + angka);
+            break;
+        } else {
+            console.log("Input tidak valid, silakan masukkan angka.");
+        }
+    }
+    // 3.Cetak daftar belanja minimal sekali.
+    while (true) {
+        let daftarBelanja = prompt("Masukkan daftar belanja (pisahkan dengan koma):");
+        if (daftarBelanja) {
+            console.log("Daftar belanja Anda: " + daftarBelanja);
+            break;
+        } else {
+            console.log("Input tidak valid, silakan masukkan daftar belanja.");
+        }
+    }
+    // 4.Tampilkan iklan minimal sekali meskipun user klik skip.
+    do {
+        let userConfirm = confirm("Tonton Iklan ini");
+
+        if (userConfirm) {
+            console.log("Terima kasih telah menonton iklan.");
+        } else {
+            console.log("Anda melewati iklan.");
+        }
+    } while (false);
+    // 5.Coba login minimal sekali walau salah.
+    let correctUsername = "admin";
+    let correctPassword = "password";
+    do {
+        let username = prompt("Masukkan username:");
+        let password = prompt("Masukkan password:");
+        if (username === correctUsername && password === correctPassword) {
+            console.log("Login berhasil!");
+            break;
+        } else {
+            console.log("Login gagal, coba lagi.");
+        }
+    } while (true);
 </script>
 
 </html>

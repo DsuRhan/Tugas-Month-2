@@ -264,13 +264,21 @@
         console.log("5 x " + i + " = " + (5 * i));
     }
     // 5.Cetak bintang membentuk segitiga.
-    for (let i = 1; i <= 5; i++) {
+    let tinggi = 5;
+
+    for (let i = 1; i <= tinggi; i++) {
+        let spasi = "";
         let bintang = "";
-        for (let j = 1; j <= i; j++) {
+        for (let j = 1; j <= tinggi - i; j++) {
+            spasi += " ";
+        }
+        for (let k = 1; k <= 2 * i - 1; k++) {
             bintang += "*";
         }
-        console.log(bintang);
+
+        console.log(spasi + bintang);
     }
+
     // Studi kasus 4
     console.warn("Output : Studi Kasus 4 :");
     // 1.Terus minta password sampai benar.
@@ -372,8 +380,8 @@
     let correctUsername = "admin";
     let correctPassword = "password";
     do {
-        let username = prompt("Masukkan username:");
-        let password = prompt("Masukkan password:");
+        let username = prompt("Masukkan username:   (admin)");
+        let password = prompt("Masukkan password:   (password)");
         if (username === correctUsername && password === correctPassword) {
             console.log("Login berhasil!");
             break;

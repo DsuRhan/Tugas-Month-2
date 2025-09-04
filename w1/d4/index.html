@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    while (true) {
+        let angka = prompt("Masukkan angka: (klik batal untuk keluar)");
+
+        if (angka === null) {
+            let yakin = confirm("Anda yakin ingin keluar?");
+            if (yakin) {
+                console.log("User keluar");
+                break; // keluar dari loop
+            } else {
+                continue; // ulangi prompt
+            }
+        }
+
+        if (angka === "") {
+            alert("Anda tidak memasukkan angka");
+            continue;
+        }
+
+        if (!isNaN(angka)) {
+            if (angka % 2 === 0) {
+                alert(angka + " adalah bilangan genap");
+                console.log(angka + " adalah bilangan genap");
+            } else {
+                alert(angka + " adalah bilangan ganjil");
+                console.log(angka + " adalah bilangan ganjil");
+            }
+        } else {
+            alert(angka + " bukan angka");
+            console.log(angka + " bukan angka");
+        }
+    }
+
+</script>
+
+</html>

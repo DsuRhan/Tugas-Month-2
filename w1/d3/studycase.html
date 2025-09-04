@@ -332,63 +332,73 @@
     }
     // Studi kasus 5
     console.warn("Output : Studi Kasus 5 :");
-    // 1.Menampilkan menu minimal sekali walau input salah.
-    while (true) {
-        let menu = prompt("Pilih menu (1. Nasi Goreng, 2. Mie Ayam):");
-        if (menu === "1") {
+
+    // 1. Menampilkan menu minimal sekali walau input salah.
+    let newMenu;
+    do {
+        menu = prompt("Pilih menu (1. Nasi Goreng, 2. Mie Ayam):");
+        if (newMenu === "1") {
             console.log("Anda memilih Nasi Goreng.");
-            break;
-        } else if (menu === "2") {
+        } else if (newMenu === "2") {
             console.log("Anda memilih Mie Ayam.");
-            break;
         } else {
             console.log("Menu tidak valid, silakan coba lagi.");
         }
-    }
-    // 2.Meminta user memasukkan angka minimal sekali.
-    while (true) {
+        // perulangan berhenti jika input "1" atau "2"
+    } while (newMenu !== "1" && newMenu !== "2");
+
+    // 2. Meminta user memasukkan angka minimal sekali.
+    let newAngka;
+    do {
         let input = prompt("Masukkan angka:");
-        let angka = Number(input);
-        if (!isNaN(angka)) {
-            console.log("Anda memasukkan angka: " + angka);
-            break;
+        newAngka = Number(input);
+        if (!isNaN(newAngka)) {
+            console.log("Anda memasukkan angka: " + newAngka);
         } else {
             console.log("Input tidak valid, silakan masukkan angka.");
         }
-    }
-    // 3.Cetak daftar belanja minimal sekali.
-    while (true) {
-        let daftarBelanja = prompt("Masukkan daftar belanja (pisahkan dengan koma):");
+        // ulangi jika bukan angka
+    } while (isNaN(newAngka));
+
+    // 3. Cetak daftar belanja minimal sekali.
+    let daftarBelanja;
+    do {
+        daftarBelanja = prompt("Masukkan daftar belanja (pisahkan dengan koma):");
         if (daftarBelanja) {
             console.log("Daftar belanja Anda: " + daftarBelanja);
-            break;
         } else {
             console.log("Input tidak valid, silakan masukkan daftar belanja.");
         }
-    }
-    // 4.Tampilkan iklan minimal sekali meskipun user klik skip.
+        // ulangi jika kosong/null
+    } while (!daftarBelanja);
+
+    // 4. Tampilkan iklan minimal sekali meskipun user klik skip.
     do {
         let userConfirm = confirm("Tonton Iklan ini");
-
         if (userConfirm) {
             console.log("Terima kasih telah menonton iklan.");
         } else {
             console.log("Anda melewati iklan.");
         }
+        // hanya jalan sekali karena kondisi while = false
     } while (false);
-    // 5.Coba login minimal sekali walau salah.
+
+    // 5. Coba login minimal sekali walau salah.
     let correctUsername = "admin";
     let correctPassword = "password";
+    let loginSuccess = false;
     do {
         let username = prompt("Masukkan username:   (admin)");
         let password = prompt("Masukkan password:   (password)");
         if (username === correctUsername && password === correctPassword) {
             console.log("Login berhasil!");
-            break;
+            loginSuccess = true;
         } else {
             console.log("Login gagal, coba lagi.");
         }
-    } while (true);
+        // ulangi sampai username & password benar
+    } while (!loginSuccess);
+
 </script>
 
 </html>

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+    cek console ya
 </body>
 <script>
     while (true) {
@@ -42,6 +42,12 @@
             console.log(angka + " bukan angka");
         }
     }
+    function hitungUmur(tahunLahir) {
+        let tahunSekarang = new Date().getFullYear();
+        return tahunSekarang - tahunLahir;
+    }
+
+    console.log("Umur seseorang yang lahir pada tahun 2000 adalah " + hitungUmur(2000) + " tahun.");
 
 </script>
 

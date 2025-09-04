@@ -171,18 +171,13 @@
     //study case 3
     console.warn("Study Case 3");
     //     1.Fungsi mengurangi angka.
-    function kurangDuaAngka(a, b) {
-        return a - b;
-    }
-
+    const kurangDuaAngka = (a, b) => a - b; // arrow function
     console.log("Hasil pengurangan 10 dan 4 adalah " + kurangDuaAngka(10, 4));
     // 2.Fungsi menghitung pajak.
-    function hitungPajak(gaji, persenPajak) {
-        return gaji * (persenPajak / 100);
-    }
+    const hitungPajak = (gaji, persenPajak) => gaji * (persenPajak / 100);
     console.log("Pajak dari gaji 5000000 dengan persen pajak 10% adalah " + hitungPajak(5000000, 10));
     // 3.Fungsi menampilkan salam.
-    function tampilkanSalam(waktu) {
+    const tampilkanSalam = (waktu) => {
         if (waktu < 12) {
             console.log("Selamat pagi!");
         } else if (waktu < 18) {
@@ -194,16 +189,14 @@
     console.log("Contoh salam pada pukul 10 adalah:");
     tampilkanSalam(10);
     // 4.Fungsi menghitung umur dari tahun lahir.
-    function hitungUmur(tahunLahir) {
+    const hitungUmur = (tahunLahir) => {
         let tahunSekarang = new Date().getFullYear();
         return tahunSekarang - tahunLahir;
     }
 
     console.log("Umur seseorang yang lahir pada tahun 2000 adalah " + hitungUmur(2000) + " tahun.");
     // 5.Fungsi mengonversi suhu Celcius ke Fahrenheit.
-    function CelciusKeFahrenheit(celcius) {
-        return (celcius * 9 / 5) + 32;
-    }
+    const CelciusKeFahrenheit = (celcius) => (celcius * 9 / 5) + 32;
 
     console.log("Contoh konversi suhu 25 derajat Celcius ke Fahrenheit adalah " + CelciusKeFahrenheit(25) + " derajat Fahrenheit.");
 </script>

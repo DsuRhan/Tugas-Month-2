@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Case</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case 1</h2>
+                <pre>✅ 5 Studi Kasus:
+1.Fungsi untuk menyapa user.
+2.Fungsi untuk menghitung luas persegi.
+3.Fungsi untuk menampilkan biodata.
+4.Fungsi untuk mengecek bilangan ganjil/genap.
+5.Fungsi untuk mencetak daftar menu.
+
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case kedua -->
+                <h2>Study Case 2</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Fungsi hitung luas segitiga.
+2.Fungsi hitung keliling lingkaran.
+3.Fungsi menambahkan dua angka.
+4.Fungsi mengubah huruf jadi kapital.
+5.Fungsi menghitung diskon belanja.</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 3</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Fungsi mengurangi angka.
+2.Fungsi menghitung pajak.
+3.Fungsi menampilkan salam.
+4.Fungsi menghitung umur dari tahun lahir.
+5.Fungsi mengonversi suhu Celcius ke Fahrenheit.
+
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 4</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Fungsi menghitung nilai rata-rata.
+2.Fungsi menggabungkan dua string.
+3.Fungsi mencari angka terbesar dari 2 angka.
+4.Fungsi menghitung luas lingkaran.
+5.Fungsi menghitung gaji bersih setelah potongan.
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 5</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Menampilkan menu minimal sekali walau input salah.
+2.Meminta user memasukkan angka minimal sekali.
+3.Cetak daftar belanja minimal sekali.
+4.Tampilkan iklan minimal sekali meskipun user klik skip.
+5.Coba login minimal sekali walau salah.</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
+
+</body>
+<script>
+    // Study Case 1
+    console.warn("Study Case 1");
+    //     1.Fungsi untuk menyapa user.
+    function sapaUser(nama) {
+        console.log("Halo, " + nama + "! Selamat datang.");
+    }
+
+    sapaUser("Rayhan");
+    // 2.Fungsi untuk menghitung luas persegi.
+    function luasPersegi(sisi) {
+        return sisi * sisi;
+    }
+
+    let sisi = 5;
+    console.log("Luas persegi dengan sisi " + sisi + " adalah " + luasPersegi(sisi));
+    // 3.Fungsi untuk menampilkan biodata.
+    function tampilkanBiodata(nama, umur, hobi) {
+        console.log("Nama: " + nama);
+        console.log("Umur: " + umur + " tahun");
+        console.log("Hobi: " + hobi);
+    }
+
+    tampilkanBiodata("Rayhan", 20, "Membaca");
+    // 4.Fungsi untuk mengecek bilangan ganjil/genap.
+    function cekGanjilGenap(angka) {
+        if (angka % 2 === 0) {
+            console.log(angka + " adalah bilangan genap");
+        } else {
+            console.log(angka + " adalah bilangan ganjil");
+        }
+    }
+
+    cekGanjilGenap(10);
+    cekGanjilGenap(7);
+    // 5.Fungsi untuk mencetak daftar menu.
+    function cetakMenu(menu) {
+        console.log("Daftar Menu:");
+        for (let i = 0; i < menu.length; i++) {
+            console.log((i + 1) + ". " + menu[i]);
+        }
+    }
+
+    let daftarMenu = ["Nasi Goreng", "Mie Ayam", "Sate", "Bakso"];
+    cetakMenu(daftarMenu);
+    // Study Case 2
+    console.warn("Study Case 2");
+    //     1.Fungsi hitung luas segitiga.
+    function luasSegitiga(alas, tinggi) {
+        return 0.5 * alas * tinggi;
+    }
+
+    let alas = 10;
+    let tinggi = 5;
+    console.log("Luas segitiga dengan alas " + alas + " dan tinggi " + tinggi + " adalah " + luasSegitiga(alas, tinggi));
+    // 2.Fungsi hitung keliling lingkaran.
+    function kelilingLingkaran(radius) {
+        return 2 * Math.PI * radius;
+    }
+
+    let radius = 7;
+    console.log("Keliling lingkaran dengan radius " + radius + " adalah " + kelilingLingkaran(radius));
+    // 3.Fungsi menambahkan dua angka.
+    function tambahDuaAngka(a, b) {
+        return a + b;
+    }
+
+    console.log("Hasil penjumlahan 5 dan 3 adalah " + tambahDuaAngka(5, 3));
+    // 4.Fungsi mengubah huruf jadi kapital.
+    function ubahKeKapital(teks) {
+        return teks.toUpperCase();
+    }
+
+    console.log("Contoh hasil dari kata 'lol' menjadi kapital adalah " + ubahKeKapital("lol"));
+    // 5.Fungsi menghitung diskon belanja.
+    function hitungDiskon(harga, diskon) {
+        return harga - (harga * diskon);
+    }
+
+    console.log("Harga setelah diskon adalah " + hitungDiskon(100000, 0.1));
+    //study case 3
+    console.warn("Study Case 3");
+    //     1.Fungsi mengurangi angka.
+    function kurangDuaAngka(a, b) {
+        return a - b;
+    }
+
+    console.log("Hasil pengurangan 10 dan 4 adalah " + kurangDuaAngka(10, 4));
+    // 2.Fungsi menghitung pajak.
+    function hitungPajak(gaji, persenPajak) {
+        return gaji * (persenPajak / 100);
+    }
+    console.log("Pajak dari gaji 5000000 dengan persen pajak 10% adalah " + hitungPajak(5000000, 10));
+    // 3.Fungsi menampilkan salam.
+    function tampilkanSalam(waktu) {
+        if (waktu < 12) {
+            console.log("Selamat pagi!");
+        } else if (waktu < 18) {
+            console.log("Selamat siang!");
+        } else {
+            console.log("Selamat malam!");
+        }
+    }
+    console.log("Contoh salam pada pukul 10 adalah:");
+    tampilkanSalam(10);
+    // 4.Fungsi menghitung umur dari tahun lahir.
+    function hitungUmur(tahunLahir) {
+        let tahunSekarang = new Date().getFullYear();
+        return tahunSekarang - tahunLahir;
+    }
+
+    console.log("Umur seseorang yang lahir pada tahun 2000 adalah " + hitungUmur(2000) + " tahun.");
+    // 5.Fungsi mengonversi suhu Celcius ke Fahrenheit.
+    function CelciusKeFahrenheit(celcius) {
+        return (celcius * 9 / 5) + 32;
+    }
+
+    console.log("Contoh konversi suhu 25 derajat Celcius ke Fahrenheit adalah " + CelciusKeFahrenheit(25) + " derajat Fahrenheit.");
+</script>
+
+</html>

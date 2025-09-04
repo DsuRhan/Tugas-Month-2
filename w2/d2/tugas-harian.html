@@ -5,10 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tugas-harian.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
 
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case</h2>
+                <pre>Studi Kasus:
+Buat program untuk memproses daftar nilai siswa:
+</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 </body>
+<script>
+    let nilaiSiswa = [80, 90, 75, 85, 95, 45, 60, 65, 20, 100];
+    // 1. Filter nilai lulus (>= 70)
+    let lulus = nilaiSiswa.filter(n => n >= 70);
+    // 2. Map: tambahkan komentar
+    let denganKomentar = nilaiSiswa.map(n => {
+        return {
+            nilai: n,
+            status: n >= 70 ? "Lulus" : "Gagal"
+        };
+    });
+    // 3. Reduce: hitung total nilai
+    let total = nilaiSiswa.reduce((acc, curr) => acc + curr, 0);
+    // 4. Cetak hasil
+    console.log("Nilai Lulus:", lulus);
+
+    console.log("Daftar dengan komentar:", denganKomentar);
+
+    console.log("Total nilai:", total); 
+</script>
 
 </html>

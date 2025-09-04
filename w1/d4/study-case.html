@@ -199,6 +199,33 @@
     const CelciusKeFahrenheit = (celcius) => (celcius * 9 / 5) + 32;
 
     console.log("Contoh konversi suhu 25 derajat Celcius ke Fahrenheit adalah " + CelciusKeFahrenheit(25) + " derajat Fahrenheit.");
+    // Study Case 4
+    console.warn("Study Case 4");
+    //     1.Fungsi menghitung nilai rata-rata.
+    function rataRata(a, b, c, d, e, f) {
+        return (a + b + c + d + e + f) / rataRata.length;
+    }
+    console.log("Contoh nilai rata-rata dari 80, 90, 75, 85, 95, 60 adalah " + rataRata(80, 90, 75, 85, 95, 60));
+    // 2.Fungsi menggabungkan dua string.
+    function gabungString(str1, str2) {
+        return str1 + " " + str2;
+    }
+    console.log("Contoh penggabungan 'Hello' dan 'World' adalah: " + gabungString("Hello", "World"));
+    // 3.Fungsi mencari angka terbesar dari 2 angka.
+    function cariTerbesar(a, b) {
+        return a > b ? a : b;
+    }
+    console.log("Contoh mencari angka terbesar antara 10 dan 20 adalah: " + cariTerbesar(10, 20));
+    // 4.Fungsi menghitung luas lingkaran.
+    function luasLingkaran(radius) {
+        return Math.PI * radius * radius;
+    }
+    console.log("Contoh menghitung luas lingkaran dengan radius 5 adalah: " + luasLingkaran(5));
+    // 5.Fungsi menghitung gaji bersih setelah potongan.
+    function hitungGajiBersih(gajiKotor, persenPotongan) {
+        return gajiKotor - (gajiKotor * persenPotongan);
+    }
+    console.log("Contoh menghitung gaji bersih dari gaji kotor 5000000 dengan potongan 10% adalah: " + hitungGajiBersih(5000000, 0.1));
 </script>
 
 </html>

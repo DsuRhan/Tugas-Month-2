@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Study Case</title>
+        <link rel="stylesheet" href="tugas-harian.css" />
+    </head>
+
+    <body>
+        <div class="aa72-bg"></div>
+        <header>
+            <h1>Study Case - JavaScript</h1>
+            <p>Silakan buka console untuk melihat output</p>
+        </header>
+
+        <main>
+            <section>
+                <article class="card">
+                    <!-- isi study case pertama -->
+                    <h2>Study Case</h2>
+                    <pre>Studi Kasus:
+Buat program untuk mengelola daftar belanja:
+
+</pre>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <small>AA72 at your service, Master.</small>
+        </footer>
+
+    </body>
+    <script>
+        let belanja = ["susu", "roti", "telur", "gula", "tepung", "mentega"];
+        belanja.pop(); // hapus item terakhir (mentega)
+        belanja.shift(); // hapus item pertama (susu)
+        belanja.splice(2, 0, "coklat"); // tambah item "coklat" di index ke-2
+        console.log("Daftar belanja saat ini: " + belanja);
+        console.log("Total item belanja: " + belanja.length);
+    </script>
+
+    </html>

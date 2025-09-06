@@ -5,11 +5,11 @@
 1. **Apa fungsi utama JavaScript dalam sebuah website?**  
    a. Membuat struktur halaman  
    b. Menambahkan gaya/tampilan  
-   c. Membuat website interaktif  <-----
+   c. Membuat website interaktif  <-----  <br>
    d. Menghubungkan ke database  
 
 2. **Manakah yang termasuk framework JavaScript?**  
-   a. React  <------
+   a. React  <------  <br>
    b. jQuery  
    c. Lodash  
    d. Bootstrap  
@@ -33,7 +33,7 @@
     `==` Membandingkan nilai saja, tipe nya bisa disesuaikan secara otomotis, Sedangkan `===` membandingkan nilai dan tipe nya, jadi lebih ketat.
 8. Manakah dari pop-up berikut yang digunakan untuk **meminta input teks dari user**?  
    a. `alert()`  
-   b. `prompt()`  <-----
+   b. `prompt()`  <-----  <br>
    c. `confirm()`  
    d. `console.log()`  
 

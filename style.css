@@ -21,6 +21,10 @@ body {
     animation: gradientShift 12s ease infinite;
     color: #f5faff;
     line-height: 1.7;
+    overflow-x: hidden;
+    /* matikan scroll horizontal */
+    overflow-y: auto;
+    /* tetap bisa scroll vertikal */
     /* Lebih nyaman dibaca */
 }
 

@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kompilasi tugas Bulan 1</title>
+    <title>Kompilasi Tugas Bulan 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>Kompilasi Tugas Bulan 1</h1>
-
-        <!-- Hamburger menu (checkbox hack) -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
         <nav class="menu">
             <a href="#minggu1">Minggu 1</a>
             <a href="#minggu2">Minggu 2</a>
@@ -25,53 +22,230 @@
     </header>
 
     <main>
+        <!-- Minggu 1 -->
         <section id="minggu1">
             <h2>Minggu 1</h2>
-            <ul>
-                <li><a href="w1/d1/tugasharian.html" target="_blank">Tugas 1</a></li>
-                <li><a href="w1/d1/index.html" target="_blank">Latihan praktek 1</a></li>
-                <li><a href="w1/d2/tugasharian.html" target="_blank">Tugas 2</a></li>
-                <li><a href="w1/d2/tugasharian.html" target="_blank">Latihan praktek 2</a></li>
-                <li><a href="w1/d2/studycase.html" target="_blank">Studi Kasus 2</a></li>
-                <li><a href="w1/d3/tugasharian3.html">Tugas 3</a></li>
-                <li><a href="w1/d3/index.html" target="_blank">Latihan praktek 3</a></li>
-                <li><a href="w1/d3/studycase.html" target="_blank">Studi Kasus 3</a></li>
-                <li><a href="w1/d4/index.html" target="_blank">Latihan praktek 4</a></li>
-                <li><a href="w1/d4/tugasharian.html">Tugas 4 </a></li>
-                <li><a href="w1/d4/study-case.html" target="_blank">Studi Kasus 4</a></li>
-                <li><a href="w1/d5/tugas-harian.html">Tugas 5 #notyetavailable</a></li>
-                <li><a href="w1/d5/study-case.html" target="_blank">Studi Kasus 5</a></li>
-            </ul>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" onclick="scrollContainer('minggu1', -1)">◀</button>
+                <div class="day-container">
+                    <div class="day-card">
+                        <h3>Hari 1</h3>
+                        <div class="task-list">
+                            <a href="w1/d1/tugasharian.html" target="_blank">Tugas Harian</a>
+                            <a href="w1/d1/index.html" target="_blank">Latihan Praktek</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 2</h3>
+                        <div class="task-list">
+                            <a href="w1/d2/tugasharian.html" target="_blank">Tugas Harian</a>
+                            <a href="w1/d2/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w1/d2/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 3</h3>
+                        <div class="task-list">
+                            <a href="w1/d3/tugasharian3.html" target="_blank">Tugas Harian</a>
+                            <a href="w1/d3/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w1/d3/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 4</h3>
+                        <div class="task-list">
+                            <a href="w1/d4/tugasharian.html" target="_blank">Tugas Harian</a>
+                            <a href="w1/d4/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w1/d4/study-case.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 5</h3>
+                        <div class="task-list">
+                            <a href="w1/d5/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w1/d5/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w1/d5/study-case.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <!-- Tambah card Hari 3,4,5 -->
+                </div>
+                <button class="scroll-btn right" onclick="scrollContainer('minggu1', 1)">▶</button>
+            </div>
         </section>
 
+        <!-- Minggu 2 -->
         <section id="minggu2">
             <h2>Minggu 2</h2>
-            <ul>
-                <li><a href="w2/d1/tugas-harian.html" target="_blank">Tugas 1 </a></li>
-                <li><a href="w2/d2/tugas-harian.html" target="_blank">Tugas 2 </a></li>
-                <li><a href="w2/d3/tugas-harian.html" target="_blank">Tugas 3 </a></li>
-                <li><a href="w2/d4/tugas-harian.html" target="_blank">Tugas 4 </a></li>
-                <li><a href="w2/d5/tugas-harian.html" target="_blank">Tugas 5 </a></li>
-            </ul>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" onclick="scrollContainer('minggu2', -1)">◀</button>
+                <div class="day-container">
+                    <div class="day-card">
+                        <h3>Hari 1</h3>
+                        <div class="task-list">
+                            <a href="w2/d1/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w2/d1/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w2/d1/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 2</h3>
+                        <div class="task-list">
+                            <a href="w2/d2/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w2/d2/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w2/d2/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 3</h3>
+                        <div class="task-list">
+                            <a href="w2/d3/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w2/d3/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w2/d3/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 4</h3>
+                        <div class="task-list">
+                            <a href="w2/d4/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w2/d4/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w2/d4/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Hari 5</h3>
+                        <div class="task-list">
+                            <a href="w2/d5/tugas-harian.html" target="_blank">Tugas Harian</a>
+                            <a href="w2/d5/index.html" target="_blank">Latihan Praktek</a>
+                            <a href="w2/d5/studycase.html" target="_blank">Studi Kasus</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollContainer('minggu2', 1)">▶</button>
+            </div>
+            <!-- lanjut Hari 2,3,4,5 -->
         </section>
 
+        <!-- Minggu 3 -->
         <section id="minggu3">
-            <h2>Minggu 3</h2>
-            <ul>
-                <li><a href="#">Tugas 1 #notyetavailable</a></li>
-                <li><a href="#">Tugas 2 #notyetavailable</a></li>
-                <li><a href="#">Tugas 3 #notyetavailable</a></li>
-            </ul>
+            <h2>Minggu 3 (NotyetAvailable)</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" onclick="scrollContainer('minggu3', -1)">◀</button>
+                <div class="day-container">
+
+                    <div class="day-card">
+                        <h3> Hari 1</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 2</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 3</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 4</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 5</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollContainer('minggu3', 1)">▶</button>
+            </div>
+            <!-- tambah hari lain -->
         </section>
 
+        <!-- Minggu 4 -->
         <section id="minggu4">
-            <h2>Minggu 4</h2>
-            <ul>
-                <li><a href="#">Tugas 1 #notyetavailable</a></li>
-                <li><a href="#">Tugas 2 #notyetavailable</a></li>
-            </ul>
+            <h2>Minggu 4 (NotyetAvailable)</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" onclick="scrollContainer('minggu4', -1)">◀</button>
+                <div class="day-container">
+
+                    <div class="day-card">
+                        <h3> Hari 1</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 2</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 3</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 4</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3> Hari 5</h3>
+                        <div class="task-list">
+                            <a href="">Tugas Harian</a>
+                            <a href="">Latihan Praktek</a>
+                            <a href="">Studi Kasus</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollContainer('minggu4', 1)">▶</button>
+            </div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2025 Rhan.Des. All rights reserved.</p>
+    </footer>
+    <!-- Floating Stella -->
+    <div id="stella-run">
+        <img src="/assets/aa72-gif.gif" alt="Stella Standing">
+    </div>
+    <script>
+        function scrollContainer(sectionId, direction) {
+            const section = document.querySelector(`#${sectionId} .day-container`);
+            const card = section.querySelector(".day-card");
+            const scrollAmount = card.offsetWidth + 16; // lebar card + gap
+            section.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+        }
+    </script>
+
 </body>
 
 </html>

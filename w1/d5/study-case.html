@@ -5,10 +5,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case 1</h2>
+                <pre>✅ 5 Studi Kasus:
+1.Buat variabel namaSekolah di global, lalu tampilkan di dalam fungsi.
+2.Buat variabel namaGuru di dalam fungsi, coba tampilkan di luar fungsi.
+3.Buat perulangan for dengan let i, cek apakah i bisa dipakai di luar perulangan.
+4.Bandingkan var dan let di dalam perulangan (lihat bedanya).
+5.Buat dua fungsi berbeda, masing-masing punya variabel namaSiswa. Apakah mereka bisa saling ganggu?
+
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case kedua -->
+                <h2>Study Case 2</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Coba tampilkan variabel var sebelum didefinisikan.
+2.Coba tampilkan variabel let sebelum didefinisikan.
+3.Coba tampilkan variabel const sebelum didefinisikan.
+4.Buat fungsi normal di bawah, lalu panggil di atas.
+5.Buat fungsi versi panah (const halo = () => {}), panggil di atas. Apa bedanya?</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 3</h2>
+                <pre>✅ 5 Studi Kasus:
+
+1.Buat fungsi buatCounter() yang setiap dipanggil nambah 1.
+2.Buat fungsi buatTabungan() yang bisa menyimpan uang.
+3.Buat fungsi buatKeranjangBelanja() yang bisa menambahkan barang baru.
+4.Buat fungsi buatTimer() yang menyimpan detik setiap kali dipanggil.
+5.Buat fungsi buatCatatanNama() yang bisa menambahkan nama siswa ke daftar.
+
+</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 
 </body>
+<script>
+    // Study Case 1
+    console.warn("Study Case 1");
+    //     1.Buat variabel namaSekolah di global, lalu tampilkan di dalam fungsi.
+    let namaSekolah = "AA72 School :<";
+    function tampilkanNamaSekolah() {
+        console.log(namaSekolah);
+    }
+    tampilkanNamaSekolah();
+    // 2.Buat variabel namaGuru di dalam fungsi, coba tampilkan di luar fungsi.
+    function tampilkanNamaGuru() {
+        let namaGuru = "Mr. Smith";
+        console.log(namaGuru);
+    }
+    tampilkanNamaGuru();
+    // 3.Buat perulangan for dengan let i, cek apakah i bisa dipakai di luar perulangan.
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+    //console.log(i); // Error: i is not defined
+    try {
+        console.log(i);
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+    // 4.Bandingkan var dan let di dalam perulangan (lihat bedanya).
+    for (var j = 0; j < 5; j++) {
+        console.log(j);
+    }
+    console.log(j); // No Error: j is defined
+    for (let k = 0; k < 5; k++) {
+        console.log(k);
+    }
+    //console.log(k); // Error: k is not defined
+    try {
+        console.log(k);
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+    // 5.Buat dua fungsi berbeda, masing-masing punya variabel namaSiswa. Apakah mereka bisa saling ganggu?
+    function fungsiA() {
+        let namaSiswa = "Alice";
+        console.log(namaSiswa);
+    }
+    function fungsiB() {
+        let namaSiswa = "Bob";
+        console.log(namaSiswa);
+    }
+    fungsiA(); // Alice
+    fungsiB(); // Bob
+    // Study Case 2
+    console.warn("Study Case 2");
+
+    // 1.Coba tampilkan variabel var sebelum didefinisikan.
+    console.log(namaVar); // undefined
+    var namaVar = "Ini var";
+    // 2.Coba tampilkan variabel let sebelum didefinisikan.
+    //console.log(namaLet); // Error: Cannot access 'namaLet' before initialization
+    try {
+        console.log(namaLet);
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+    let namaLet = "Ini let";
+
+    // 3.Coba tampilkan variabel const sebelum didefinisikan.
+    //console.log(namaConst); // Error: Cannot access 'namaConst' before initialization
+    try {
+        console.log(namaConst);
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+    const namaConst = "Ini const";
+    // 4.Buat fungsi normal di bawah, lalu panggil di atas.
+    halo();
+    function halo() {
+        console.log("Halo!");
+    }
+    // 5.Buat fungsi versi panah (const halo = () => {}), panggil di atas. Apa bedanya?
+    //haloArrow();// Error: Cannot access 'haloArrow' before initialization
+    try {
+        haloArrow();
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+    const haloArrow = () => {
+        console.log("Halo dari fungsi panah!");
+    }
+    // Study Case 3
+    console.warn("Study Case 3");
+    // 1.Buat fungsi buatCounter() yang setiap dipanggil nambah 1.
+    let counter = 0;
+    function buatCounter() {
+        counter++;
+        console.log(counter);
+    }
+    buatCounter(); // 1
+    buatCounter(); // 2
+    buatCounter(); // 3 
+    // 2.Buat fungsi buatTabungan() yang bisa menyimpan uang.
+    let tabungan = 0;
+    function buatTabungan(jumlah) {
+        tabungan += jumlah;
+        console.log("Tabungan saat ini: " + tabungan);
+    }
+    buatTabungan(100); // Simpan 100
+    buatTabungan(50);  // Simpan 50
+    // 3.Buat fungsi buatKeranjangBelanja() yang bisa menambahkan barang baru.
+    let keranjang = [];
+    function buatKeranjangBelanja(barang) {
+        keranjang.push(barang);
+        console.log("Keranjang belanja saat ini: " + keranjang.join(", "));
+    }
+    buatKeranjangBelanja("Buku");
+    buatKeranjangBelanja("Pensil");
+    // 4.Buat fungsi buatTimer() yang menyimpan detik setiap kali dipanggil.
+    let detik = 0;
+    function buatTimer() {
+        detik++;
+        console.log("Detik: " + detik);
+    }
+    buatTimer(); // Detik: 1
+    buatTimer(); // Detik: 2
+    // 5.Buat fungsi buatCatatanNama() yang bisa menambahkan nama siswa ke daftar.
+    let daftarNama = [];
+    function buatCatatanNama(nama) {
+        daftarNama.push(nama);
+        console.log("Daftar nama siswa: " + daftarNama.join(", "));
+    }
+    buatCatatanNama("Charlie");
+    buatCatatanNama("Diana");
+</script>
 
 </html>

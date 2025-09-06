@@ -45,7 +45,7 @@ body {
     background: linear-gradient(135deg, #001f3f, #0074D9, #7FDBFF);
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
-
+    overflow: scroll;
 }
 
 /* Heading */

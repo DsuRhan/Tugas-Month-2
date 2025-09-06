@@ -5,10 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tugas-harian.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
 
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case</h2>
+                <pre>Studi Kasus:
+Buat program yang menerima data siswa dari object, lalu pisahkan nilai
+tertentu dan manipulasi data lainnya:
+</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 </body>
+<script>
+    let siswa = {
+        nama: "Rina",
+        usia: 17,
+        kelas: "XII",
+        jurusan: "IPA"
+    }
+    console.log("Data siswa:");
+    console.log(siswa);
+    // Destructuring
+    let { nama, kelas } = siswa;
+    console.log("Data siswa setelah destructuring:");
+    console.log(nama);
+    console.log(kelas);
+    console.log(siswa);
+    //spread operator
+    let Nilai = { ...siswa, nilai: 90 };
+    console.log("Data siswa setelah spread operator:");
+    console.log(Nilai);
+    // rest operator
+    function rataRata(...nilai) {
+        return nilai.reduce((a, b) => a + b, 0) / nilai.length;
+    }
+    console.log("Rata-rata dari nilai (80, 90, 85, 95):");
+    console.log(rataRata(80, 90, 85, 95));
+</script>
 
 </html>

@@ -1,0 +1,239 @@
+<div class="aa72-bg"></div>
+<header>
+    <h1>Study Case - JavaScript</h1>
+    <p>Silakan buka console untuk melihat output</p>
+</header>
+
+<main>
+    <section>
+        <article class="card">
+            <!-- isi study case pertama -->
+            <h2>### Variabel, Tipe Data, Operator</h2>
+            <pre>
+1. Buat variabel `nama`, `umur`, `statusPelajar`. Tampilkan semuanya dengan `console.log()`.  
+2. Buat variabel `uangSaku = 50000`, `jajan = 15000`, hitung sisa uangnya.  
+3. Buat variabel `sudahLogin = true`. Cek apakah user sudah login, jika iya tampilkan `"Selamat datang"`.  
+4. Buat variabel `nilai = 75`. Jika nilai ≥ 70 tampilkan `"Lulus"`, jika tidak `"Tidak Lulus"`.  
+5. Coba deklarasikan `const angka = 10`, lalu ubah nilainya. Apa hasilnya?  
+
+</pre>
+        </article>
+
+        <article class="card">
+            <!-- isi study case kedua -->
+            <h2>### Struktur Kontrol (If, Switch, Loop)</h2>
+            <pre>
+6. Buat program cek ganjil/genap dari angka tertentu.  
+7. Buat program yang menampilkan nama bulan sesuai angka (1–12) menggunakan `switch`.  
+8. Buat program untuk mencetak angka 1 sampai 20 dengan `for`.  
+9. Buat program untuk mencetak bilangan kelipatan 5 dari 1–50.  
+10. Buat program yang terus meminta input password hingga benar (`while`).  </pre>
+        </article>
+
+        <article class="card">
+            <!-- isi study case ketiga -->
+            <h2>### Fungsi</h2>
+            <pre>
+11. Buat fungsi `sapa(nama)` yang menampilkan `"Halo, [nama]!"`.  
+12. Buat fungsi `hitungLuasSegitiga(alas, tinggi)` yang mengembalikan hasilnya.  
+13. Buat fungsi `cekUmur(umur)` → tampilkan `"Dewasa"` jika ≥ 18, `"Anak-anak"` jika < 18.  
+14. Buat fungsi ekspresi untuk menghitung diskon belanja.  
+15. Buat arrow function untuk menghitung konversi suhu Celcius ke Fahrenheit.  
+article>
+            <article class="card">
+                <!-- isi study case keempat -->
+                <h2>### Scope, Hoisting, Closure</h2>
+                <pre>
+16. Buat variabel `sekolah` di global, tampilkan di dalam fungsi.  
+17. Buat variabel `guru` di dalam fungsi, coba tampilkan di luar fungsi. Apa yang terjadi?  
+18. Coba tampilkan variabel `var` sebelum dideklarasikan. Apa hasilnya?  
+19. Buat fungsi `buatCounter()` yang tiap kali dipanggil menambah angka +1 (gunakan closure).  
+20. Buat fungsi `pencatatanPengeluaran()` yang menyimpan total pengeluaran dengan closure. 
+
+</pre>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <small>AA72 at your service, Master.</small>
+</footer>
+
+</body>
+<script>
+    //     ### Variabel, Tipe Data, Operator</h2>
+    console.warn("### Variabel, Tipe Data, Operator");
+    // 1. Buat variabel `nama`, `umur`, `statusPelajar`. Tampilkan semuanya dengan `console.log()`.  
+    let nama = "Rina";
+    let umur = 17;
+    let statusPelajar = true;
+    console.log(nama);
+    console.log(umur);
+    console.log(statusPelajar);
+    // 2. Buat variabel `uangSaku = 50000`, `jajan = 15000`, hitung sisa uangnya.  
+    let uangSaku = 50000;
+    let jajan = 15000;
+    let sisaUang = uangSaku - jajan;
+    console.log("Sisa uang saku: " + sisaUang);
+    // 3. Buat variabel `sudahLogin = true`. Cek apakah user sudah login, jika iya tampilkan `"Selamat datang"`.  
+    let sudahLogin = true;
+    if (sudahLogin) {
+        console.log("Selamat datang");
+    }
+    // 4. Buat variabel `nilai = 75`. Jika nilai ≥ 70 tampilkan `"Lulus"`, jika tidak `"Tidak Lulus"`.  
+    let nilai = 75;
+    if (nilai >= 70) {
+        console.log("Lulus");
+    } else {
+        console.log("Tidak Lulus");
+    }
+    // 5. Coba deklarasikan `const angka = 10`, lalu ubah nilainya. Apa hasilnya?  
+    const angka = 10;
+    try {
+        angka = 20;
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }// Error: Assignment to constant variable. karena const tidak bisa diubah nilainya.
+    // ### Struktur Kontrol (If, Switch, Loop)</h2>
+    console.warn("### Struktur Kontrol (If, Switch, Loop)");
+    // 6. Buat program cek ganjil/genap dari angka tertentu.
+    let angkaCek = 7;
+    if (angkaCek % 2 === 0) {
+        console.log(angkaCek + " adalah angka genap");
+    } else {
+        console.log(angkaCek + " adalah angka ganjil");
+    }
+    // 7. Buat program yang menampilkan nama bulan sesuai angka (1–12) menggunakan `switch`.  
+    let bulan = 4;
+    switch (bulan) {
+        case 1:
+            console.log("Januari");
+            break;
+        case 2:
+            console.log("Februari");
+            break;
+        case 3:
+            console.log("Maret");
+            break;
+        case 4:
+            console.log("April");
+            break;
+        case 5:
+            console.log("Mei");
+            break;
+        case 6:
+            console.log("Juni");
+            break;
+        case 7:
+            console.log("Juli");
+            break;
+        case 8:
+            console.log("Agustus");
+            break;
+        case 9:
+            console.log("September");
+            break;
+        case 10:
+            console.log("Oktober");
+            break;
+        case 11:
+            console.log("November");
+            break;
+        case 12:
+            console.log("Desember");
+            break;
+        default:
+            console.log("Bulan tidak valid");
+    }
+    // 8. Buat program untuk mencetak angka 1 sampai 20 dengan `for`.  
+    for (let i = 1; i <= 20; i++) {
+        console.log(i);
+    }
+    // 9. Buat program untuk mencetak bilangan kelipatan 5 dari 1–50.  
+    for (let i = 1; i <= 50; i++) {
+        if (i % 5 === 0) {
+            console.log(i);
+        }
+    }
+    // 10. Buat program yang terus meminta input password hingga benar (`while`). 
+    let passwordBenar = "rahasia";
+    let inputPassword = "";
+    while (inputPassword !== passwordBenar) {
+        inputPassword = prompt("Masukkan password: (clue: rahasia)");
+    }
+    // ### Fungsi</h2>
+    console.warn("### Fungsi");
+    // 11. Buat fungsi `sapa(nama)` yang menampilkan `"Halo, [nama]!"`.  
+    function sapa(nama) {
+        console.log("Halo, " + nama + "!");
+    }
+    sapa("Rina");
+    // 12. Buat fungsi `hitungLuasSegitiga(alas, tinggi)` yang mengembalikan hasilnya.  
+    function hitungLuasSegitiga(alas, tinggi) {
+        return 0.5 * alas * tinggi;
+    }
+    console.log("Luas segitiga: " + hitungLuasSegitiga(10, 5));
+    // 13. Buat fungsi `cekUmur(umur)` → tampilkan `"Dewasa"` jika ≥ 18, `"Anak-anak"` jika < 18.  
+    function cekUmur(umur) {
+        if (umur >= 18) {
+            console.log("Dewasa");
+        } else {
+            console.log("Anak-anak");
+        }
+    }
+    cekUmur(17);
+    // 14. Buat fungsi ekspresi untuk menghitung diskon belanja.  
+    const hitungDiskon = function (harga, diskon) {
+        return harga - (harga * diskon);
+    };
+    console.log("Harga setelah diskon: " + hitungDiskon(100000, 0.1));
+    // 15. Buat arrow function untuk menghitung konversi suhu Celcius ke Fahrenheit.  
+    const celciusToFahrenheit = (celcius) => {
+        return (celcius * 9 / 5) + 32;
+    };
+    console.log("25°C = " + celciusToFahrenheit(25) + "°F");
+    // ## Scope, Hoisting, Closure</h2>
+    console.warn("## Scope, Hoisting, Closure");
+    // 16. Buat variabel `sekolah` di global, tampilkan di dalam fungsi.  
+    let sekolah = "AA72 School";
+    function tampilkanSekolah() {
+        console.log(sekolah);
+    }
+    tampilkanSekolah();
+    // 17. Buat variabel `guru` di dalam fungsi, coba tampilkan di luar fungsi. Apa yang terjadi?  
+    function tampilkanGuru() {
+        let guru = "Budi";
+        console.log(guru);
+    }
+    tampilkanGuru();
+    // 18. Coba tampilkan variabel `var` sebelum dideklarasikan. Apa hasilnya?  
+    console.log(variabelVar); // undefined
+    var variabelVar = "Ini adalah variabel var";
+    // 19. Buat fungsi `buatCounter()` yang tiap kali dipanggil menambah angka +1 (gunakan closure).  
+    function buatCounter() {
+        let counter = 0;
+        return function () {
+            counter++;
+            console.log(counter);
+        };
+    }
+    const hitung = buatCounter();
+    hitung(); // 1
+    hitung(); // 2
+    hitung(); // 3
+    // 20. Buat fungsi `pencatatanPengeluaran()` yang menyimpan total pengeluaran dengan closure. 
+    function pencatatanPengeluaran() {
+        let totalPengeluaran = 0;
+        return function (jumlah) {
+            totalPengeluaran += jumlah;
+            console.log("Total pengeluaran: " + totalPengeluaran);
+        };
+    }
+    const catatPengeluaran = pencatatanPengeluaran();
+    catatPengeluaran(10000);
+    catatPengeluaran(5000);
+    catatPengeluaran(2000);
+
+</script>
+
+</html>

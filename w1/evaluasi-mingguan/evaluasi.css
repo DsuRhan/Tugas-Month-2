@@ -1,0 +1,181 @@
+:root {
+    --bg: #071028;
+    /* warna dasar gelap */
+    --accent: #00f0ff;
+    /* neon cyan */
+    --card: rgba(255, 255, 255, 0.05);
+    --text: #d9eef6;
+    --muted: #9fb3c8;
+    --radius: 12px;
+    --mono: 'Segoe UI Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tambahkan layer khusus gambar AA72 */
+.aa72-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: url("../../assets/aa72-background-2.png");
+    background-size: cover;
+    background-position: 20% 25%;
+    /* fokus wajah */
+    background-repeat: no-repeat;
+    z-index: -1;
+    /* taruh di belakang konten */
+    opacity: 0.05;
+    /* opsional, biar gradient masih kelihatan */
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg) no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    padding: 20px;
+    background: linear-gradient(135deg, #001f3f, #0074D9, #7FDBFF);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+/* Neon Futuristic Title */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.7),
+        0 0 20px rgba(0, 200, 255, 0.8),
+        0 0 40px rgba(0, 240, 255, 0.9);
+    animation: neonGlow 3s ease-in-out infinite alternate;
+    position: relative;
+    overflow: hidden;
+
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 255, 0.6),
+            0 0 10px rgba(0, 200, 255, 0.7),
+            0 0 20px rgba(0, 240, 255, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(0, 200, 255, 0.9),
+            0 0 30px rgba(0, 220, 255, 1),
+            0 0 60px rgba(0, 255, 255, 1);
+    }
+}
+
+/* Scanline hologram effect */
+h1::after,
+.card::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: repeating-linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.06) 1px,
+            rgba(255, 255, 255, 0.06) 2px,
+            transparent 2px,
+            transparent 4px);
+    animation: scanline 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanline {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+/* Kartu / container */
+.card,
+section,
+article,
+div {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Code block */
+pre,
+code {
+    font-family: var(--mono);
+    color: #cfeff7;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 24px 12px 24px rgba(0, 174, 255, 0.4);
+}
+
+h1,
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Footer text */
+footer,
+small {
+    color: var(--muted);
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        background-position: center top;
+    }
+}

@@ -5,10 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case 1</h2>
+                <pre>1. push() & unshift() (Tambah Isi)
+1.Kamu punya array buah, tambahin 2 buah baru di depan dan belakang.
+2.Kamu bikin array daftar belanja, masukin barang baru yang baru aja kamu ingat.
+3.Kamu punya array hewan peliharaan, tambahin hewan baru di depan.
+4.Kamu punya array film favorit, tambahin film terbaru.
+5.Kamu punya array angka, masukin angka 0 di awal.
+
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case kedua -->
+                <h2>Study Case 2</h2>
+                <pre>2. pop() & shift() (Hapus Isi)
+1.Kamu punya array mainan, buang mainan terakhir karena rusak.
+2.Kamu punya array baju, buang baju paling depan karena kotor.
+3.Kamu punya array makanan, makan makanan terakhir (hapus terakhir).
+4.Kamu punya array tugas sekolah, hapus tugas pertama karena udah selesai.
+5.Kamu punya array daftar antrian, hapus orang pertama (udah dilayani).
+</pre>
+            </article>
+
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 3</h2>
+                <pre>3. length (Hitung Isi)
+1.Hitung jumlah buah di array.
+2.Hitung jumlah teman di array.
+3.Hitung jumlah angka di array.
+4.Hitung jumlah barang di daftar belanja.
+5.Hitung jumlah hewan di array.
+
+</pre>
+            </article>
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 4</h2>
+                <pre>4. splice() (Sisip/Hapus di Tengah)
+1.Kamu punya array warna ["merah", "kuning", "hijau"], sisipkan "biru" di posisi ke-2.
+2.Kamu punya array teman, hapus teman di posisi ke-3.
+3.Kamu punya array angka [1,2,3,4,5], hapus angka 3 dan ganti dengan 30.
+4.Kamu punya array makanan, tambahin makanan baru di tengah.
+5.Kamu punya array benda ["buku", "pensil", "penghapus"], ganti "pensil" jadi "pulpen".
+
+</pre>
+            </article>
+            <article class="card">
+                <!-- isi study case ketiga -->
+                <h2>Study Case 5</h2>
+                <pre>5. Kombinasi Semua
+1.Buat array daftar belanja, tambahin barang, hapus barang, terus hitung jumlah barang.
+2.Buat array hewan peliharaan, masukin hewan baru, hapus hewan lama, lalu selipin hewan baru di tengah.
+3.Buat array angka, tambahin angka baru di akhir, buang angka awal, lalu cek jumlahnya.
+4.Buat array teman, tambahin teman baru di awal, hapus teman terakhir, lalu ganti teman ke-2 pakai nama lain.
+5.Buat array makanan, tambahin makanan, hapus makanan, selipin makanan, terus tampilkan semua.
+
+</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 
 </body>
+<script>
+    // Study Case 1
+    console.warn("Study Case 1: push() & unshift() (Tambah Isi)");
+    // 1.Kamu punya array buah, tambahin 2 buah baru di depan dan belakang.
+    let buah = ["apel", "pisang", "jeruk", "mangga", "semangka"];
+    buah.push("kiwi"); // tambah di belakang
+    buah.unshift("stroberi"); // tambah di depan
+    // 2.Kamu bikin array daftar belanja, masukin barang baru yang baru aja kamu ingat.
+    let daftarBelanja = ["susu", "roti", "telur"];
+    daftarBelanja.push("buah"); // tambah barang
+    daftarBelanja.unshift("sayur"); // tambah barang di depan
+    // 3.Kamu punya array hewan peliharaan, tambahin hewan baru di depan.
+    let hewanPeliharaan = ["kucing", "anjing", "kelinci"];
+    hewanPeliharaan.unshift("hamster"); // tambah di depan
+    // 4.Kamu punya array film favorit, tambahin film terbaru.
+    let filmFavorit = ["Inception", "Interstellar", "Dunkirk"];
+    filmFavorit.push("Tenet"); // tambah di belakang
+    // 5.Kamu punya array angka, masukin angka 0 di awal.
+    let angka = [1, 2, 3, 4, 5];
+    angka.unshift(0); // tambah di depan
+</script>
 
 </html>

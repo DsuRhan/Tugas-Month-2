@@ -10,5 +10,21 @@
 <body>
 
 </body>
+<script>
+    // Bikin array isi angka 1–10.
+    let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    // Pakai map buat kaliin semua angka dengan 5.
+    let kaliLima = angka.map(n => n * 5);
+    console.log(kaliLima);
+    // Pakai filter buat ambil angka genap.
+    let angkaGenap = angka.filter(n => n % 2 === 0)
+    console.log(angkaGenap);
+    // Pakai reduce buat jumlahin semua angka.
+    let jumlahSemuaAngka = angka.reduce((a, b) => a + b, 0);
+    console.log(jumlahSemuaAngka);
+    // Pakai find buat cari angka pertama yang lebih dari 8.
+    let angkaPertama = angka.find(n => n > 8);
+    console.log(angkaPertama);
+</script>
 
 </html>

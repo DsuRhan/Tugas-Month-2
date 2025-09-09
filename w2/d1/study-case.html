@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="study-case.css">
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 </pre>
             </article>
             <article class="card">
-                <!-- isi study case ketiga -->
+                <!-- isi study case keempat -->
                 <h2>Study Case 4</h2>
                 <pre>4. splice() (Sisip/Hapus di Tengah)
 1.Kamu punya array warna ["merah", "kuning", "hijau"], sisipkan "biru" di posisi ke-2.
@@ -67,7 +67,7 @@
 </pre>
             </article>
             <article class="card">
-                <!-- isi study case ketiga -->
+                <!-- isi study case kelima -->
                 <h2>Study Case 5</h2>
                 <pre>5. Kombinasi Semua
 1.Buat array daftar belanja, tambahin barang, hapus barang, terus hitung jumlah barang.
@@ -91,21 +91,110 @@
     console.warn("Study Case 1: push() & unshift() (Tambah Isi)");
     // 1.Kamu punya array buah, tambahin 2 buah baru di depan dan belakang.
     let buah = ["apel", "pisang", "jeruk", "mangga", "semangka"];
+    console.log(buah);
     buah.push("kiwi"); // tambah di belakang
     buah.unshift("stroberi"); // tambah di depan
+    console.log(buah);
     // 2.Kamu bikin array daftar belanja, masukin barang baru yang baru aja kamu ingat.
     let daftarBelanja = ["susu", "roti", "telur"];
+    console.log(daftarBelanja);
     daftarBelanja.push("buah"); // tambah barang
     daftarBelanja.unshift("sayur"); // tambah barang di depan
+    console.log(daftarBelanja);
     // 3.Kamu punya array hewan peliharaan, tambahin hewan baru di depan.
     let hewanPeliharaan = ["kucing", "anjing", "kelinci"];
+    console.log(hewanPeliharaan);
     hewanPeliharaan.unshift("hamster"); // tambah di depan
+    console.log(hewanPeliharaan);
     // 4.Kamu punya array film favorit, tambahin film terbaru.
     let filmFavorit = ["Inception", "Interstellar", "Dunkirk"];
+    console.log(filmFavorit);
     filmFavorit.push("Tenet"); // tambah di belakang
+    console.log(filmFavorit);
     // 5.Kamu punya array angka, masukin angka 0 di awal.
     let angka = [1, 2, 3, 4, 5];
+    console.log(angka);
     angka.unshift(0); // tambah di depan
+    console.log(angka);
+    //Study Case 2
+    console.warn("Study Case 2 : pop() & shift() (Hapus Isi)");
+    // 1.Kamu punya array mainan, buang mainan terakhir karena rusak.
+    let mainan = ["mobilan", "motoran", "boneka", "action figure"];
+    mainan.pop();
+    console.log(mainan);
+    // 2.Kamu punya array baju, buang baju paling depan karena kotor.
+    let baju = ["koko", "kemeja putih", "kemeja hitam", "kaos"];
+    baju.shift();
+    console.log(baju);
+    // 3.Kamu punya array makanan, makan makanan terakhir (hapus terakhir).
+    let makanan = ["nasi", "lauk", "ikan", "ayam"];
+    makanan.pop();
+    // 4.Kamu punya array tugas sekolah, hapus tugas pertama karena udah selesai.
+    let tugasSekolah = ["MTK", "B indonesia", "English", "PKN"];
+    tugasSekolah.shift();
+    // 5.Kamu punya array daftar antrian, hapus orang pertama (udah dilayani).
+    let daftarAntrian = ["Budi", "Agus", "Siti", "Yanti"];
+    daftarAntrian.shift();
+    console.log(daftarAntrian);
+    //Study Case 3
+    console.warn("Study Case 3 : length (Hitung Isi)");
+    // 1.Hitung jumlah buah di array.
+    console.log(`Jumlah buah dalam array buah adalah : ${buah.length}`);
+    // 2.Hitung jumlah teman di array.
+    let teman = ["Budi", "Zaki", "Yahya"];
+    console.log(`Jumlah teman dalam array teman adalah : ${teman.length}`);
+    // 3.Hitung jumlah angka di array.
+    console.log(`Jumlah Angka dalam array angka adalah : ${angka.length}`);
+    // 4.Hitung jumlah barang di daftar belanja.
+    console.log(`Jumlah barang dalam array daftarBelanja adalah : ${daftarBelanja.length}`);
+    // 5.Hitung jumlah hewan di array.
+    console.log(`Jumlah hewan dalam array hewan adalah : ${hewanPeliharaan.length}`);
+    // Study Case 4
+    console.log(`Study Case 4 : splice() (Sisip/Hapus di Tengah)`);
+    // 1.Kamu punya array warna ["merah", "kuning", "hijau"], sisipkan "biru" di posisi ke-2.
+    let warna = ["merah", "kuning", "hijau"];
+    warna.splice(1, 0, "biru")
+    console.log(warna)
+    // 2.Kamu punya array teman, hapus teman di posisi ke-3.
+    teman.splice(2, 1)
+    console.log(teman)
+    // 3.Kamu punya array angka [1,2,3,4,5], hapus angka 3 dan ganti dengan 30.
+    let angkaPt2 = [1, 2, 3, 4, 5];
+    angkaPt2.splice(2, 1, 30);
+    console.log(angkaPt2);
+    // 4.Kamu punya array makanan, tambahin makanan baru di tengah.
+    makanan.splice(5, 0, "Cereal");
+    console.log(makanan);
+    // 5.Kamu punya array benda ["buku", "pensil", "penghapus"], ganti "pensil" jadi "pulpen".
+    let benda = ["buku", "pensil", "penghapus"];
+    benda.splice(1, 1, "pulpen");
+    console.log(benda);
+    //Study Case 5
+    console.warn(`Study Case 5 : Kombinasi Semua`);
+    //     1.Buat array daftar belanja, tambahin barang, hapus barang, terus hitung jumlah barang.;
+    console.log(`Jumlah barang dalam daftar belanja saat ini adalah ${daftarBelanja.length} barang`);
+    daftarBelanja.push("Balenciaga", "Louis Vuitton");
+    console.log(`Jumlah barang dalam daftar belanja saat ini adalah ${daftarBelanja.length} barang`);
+    daftarBelanja.shift();
+    console.log(`Jumlah barang dalam daftar belanja saat ini adalah ${daftarBelanja.length} barang`);
+    // 2.Buat array hewan peliharaan, masukin hewan baru, hapus hewan lama, lalu selipin hewan baru di tengah.
+    hewanPeliharaan.splice(1, 10);
+    hewanPeliharaan.push("Kucing", "Kuda", "Lumba lumba", "Gajah", "Harimau", "Singa", "Elang");
+    hewanPeliharaan.splice(3, 0, "Ular");
+    // 3.Buat array angka, tambahin angka baru di akhir, buang angka awal, lalu cek jumlahnya.
+    angka.push(10);
+    angka.shift();
+    console.log(`Jumlah angka dalam array angka saat ini adalah ${angka.length} angka.`);
+    // 4.Buat array teman, tambahin teman baru di awal, hapus teman terakhir, lalu ganti teman ke-2 pakai nama lain.
+    teman.unshift("Harits");
+    teman.pop();
+    teman.splice(1, 1, "Ahmad");
+    // 5.Buat array makanan, tambahin makanan, hapus makanan, selipin makanan, terus tampilkan semua.
+    console.log(makanan);
+    makanan.unshift("Burgir");
+    makanan.pop();
+    makanan.splice(2, 0, "Sosis siska");
+    console.log(makanan);
 </script>
 
 </html>

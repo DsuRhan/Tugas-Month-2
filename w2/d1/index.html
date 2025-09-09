@@ -8,7 +8,21 @@
 </head>
 
 <body>
-
+    <script>
+        //     Buat array berisi 5 nama temanmu.
+        let teman = ["Yahya", "Daffa", "Zaki", "Ryan", "Faris"];
+        // Tambahin 1 nama di depan dan di belakang.
+        teman.unshift("Zain");
+        teman.push("Ian");
+        // Hapus 1 nama dari depan dan belakang.
+        teman.shift();
+        teman.pop();
+        // Selipin nama baru di posisi ke-2.
+        teman.splice(1, 0, "Usamah");
+        // Hitung berapa jumlah teman sekarang pakai .length.
+        teman.length;
+        console.log(teman.length);
+    </script>
 </body>
 
 </html>

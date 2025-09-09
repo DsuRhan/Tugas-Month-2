@@ -5,10 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="study-case.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <!-- isi study case pertama -->
+                <h2>Study Case 1</h2>
+                <pre>
+1.Ada daftar nama buah, terus cetak semua pakai forEach.
+2.Ada daftar harga barang, kalikan semua harga dengan 10% pakai map.
+3.Ada daftar umur orang, ambil yang umurnya lebih dari 17 pakai filter.
+4.Ada daftar nilai ujian, jumlahkan semua nilai pakai reduce.
+5.Ada daftar nomor kursi, cari kursi pertama yang lebih dari nomor 20 pakai find.
+
+</pre>
+            </article>
+
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 
 </body>
+<script>
+    // 1.Ada daftar nama buah, terus cetak semua pakai forEach.
+    let buah = ["apel", "pisang", "jeruk"];
+    buah.forEach(b => console.log("Buah: " + b));
+
+    // 2.Ada daftar harga barang, kalikan semua harga dengan 10% pakai map.
+    let harga = [1000, 2000, 3000];
+    let naik = harga.map(h => h * 1.1);
+    console.log(naik);
+    // 3.Ada daftar umur orang, ambil yang umurnya lebih dari 17 pakai filter.
+    let umur = [12, 18, 25, 15, 30];
+    let dewasa = umur.filter(u => u > 17);
+    console.log(dewasa);
+    // 4.Ada daftar nilai ujian, jumlahkan semua nilai pakai reduce.
+    let nilai = [80, 75, 90, 60];
+    let totalNilai = nilai.reduce((a, b) => a + b, 0);
+    console.log(totalNilai);
+    // 5.Ada daftar nomor kursi, cari kursi pertama yang lebih dari nomor 20 pakai find.
+    let kursi = [5, 12, 18, 21, 25];
+    let hasil = kursi.find(k => k > 20);
+    console.log(hasil);
+</script>
 
 </html>

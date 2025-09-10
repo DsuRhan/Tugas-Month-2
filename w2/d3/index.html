@@ -10,5 +10,27 @@
 <body>
 
 </body>
+<script>
+    let buku = {
+        judul: "Pemrograman Dasar",
+        pengarang: "Andi",
+        tahunTerbit: 2020
+    };
+
+    // tambah
+    buku.penerbit = "Gramedia";
+
+    // ubah
+    buku.tahunTerbit = 2025;
+
+    // hapus
+    delete buku.pengarang;
+
+    // tampilkan semua
+    for (let key in buku) {
+        console.log(key + " : " + buku[key]);
+    }
+
+</script>
 
 </html>

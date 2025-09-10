@@ -5,10 +5,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="study-case.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <h2>Study Case 1</h2>
+                <pre>
+1.Buat object mobil dengan properti merk dan warna. Tampilkan merk.
+2.Buat object siswa dengan properti nama dan kelas. Tampilkan kelas.
+3.Buat object hewan dengan properti jenis dan umur. Tampilkan jenis.
+4.Buat object film dengan properti judul dan tahun. Tampilkan tahun.
+5.Buat object akun dengan properti username dan password. Tampilkan username.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 2</h2>
+                <pre>
+1.Tambahkan properti harga pada object mobil.
+2.Tambahkan properti alamat pada object siswa.
+3.Tambahkan properti makanan pada object hewan.
+4.Tambahkan properti genre pada object film.
+5.Tambahkan properti email pada object akun.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 3</h2>
+                <pre>
+1.Ubah warna mobil jadi "hitam".
+2.Ubah kelas siswa jadi "XI".
+3.Ubah umur hewan jadi 5.
+4.Ubah tahun film jadi 2024.
+5.Ubah password akun jadi "rahasia123".
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 4</h2>
+                <pre>
+1.Hapus harga dari mobil.
+2.Hapus alamat dari siswa.
+3.Hapus makanan dari hewan.
+4.Hapus genre dari film.
+5.Hapus email dari akun.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 5</h2>
+                <pre>
+1.Loop semua isi mobil.
+2.Loop semua isi siswa.
+3.Loop semua isi hewan.
+4.Loop semua isi film.
+5.Loop semua isi akun.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case Besar</h2>
+                <pre>
+1.Menyimpan judul, pengarang, tahunTerbit.
+2.Menambah properti penerbit.
+3.Mengubah tahunTerbit.
+4.Menghapus pengarang.
+5.Menampilkan semua isi object.
+</pre>
+            </article>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 
 </body>
+<script>
+    //Study Case 1
+    console.warn("Study Case 1: ")
+    // 1.Buat object mobil dengan properti merk dan warna. Tampilkan merk.
+    let mobil = {
+        merk: "avanza",
+        warna: "merah"
+    };
+    console.log(mobil["merk"]);
+    // 2.Buat object siswa dengan properti nama dan kelas. Tampilkan kelas.
+    let siswa = {
+        nama: "Ryan",
+        kelas: 3
+    };
+    console.log(siswa["kelas"]);
+    // 3.Buat object hewan dengan properti jenis dan umur. Tampilkan jenis.
+    let hewan = {
+        jenis: "Kucing",
+        umur: 3
+    };
+    console.log(hewan.jenis);
+    // 4.Buat object film dengan properti judul dan tahun. Tampilkan tahun.
+    let film = {
+        judul: "The - wild - robot",
+        tahun: 2023
+    };
+    console.log(film.tahun)
+    // 5.Buat object akun dengan properti username dan password. Tampilkan username.
+    let akun = {
+        username: "daffa",
+        password: "anjay"
+    };
+    console.log(akun.username)
+    //Study Case 2
+    console.warn("Study Case 2")
+    //     1.Tambahkan properti harga pada object mobil.
+    mobil.harga = 200000000;
+    console.log(mobil);
+    // 2.Tambahkan properti alamat pada object siswa.
+    siswa.alamat = "jl. pakwowok";
+    console.log(siswa);
+    // 3.Tambahkan properti makanan pada object hewan.
+    hewan.makanan = "daging";
+    console.log(hewan)
+    // 4.Tambahkan properti genre pada object film.
+    film.genre = "adventure";
+    console.log(film);
+    // 5.Tambahkan properti email pada object akun.
+    akun.email = "daffa@gmail.com";
+    console.log(akun);
+    //Study Case 3
+    console.warn("Study Case 3 :");
+    //1.Ubah warna mobil jadi "hitam".
+    mobil.warna = "hitam";
+    console.log(mobil.warna);
+    // 2.Ubah kelas siswa jadi "XI".
+    siswa.kelas = "XI";
+    console.log(siswa.kelas);
+    // 3.Ubah umur hewan jadi 5.
+    hewan.umur = 5;
+    console.log(hewan["umur"]);
+    // 4.Ubah tahun film jadi 2024.
+    film["tahun"] = 2024;
+    console.log(film.tahun);
+    // 5.Ubah password akun jadi "rahasia123".
+    akun["password"] = "rahasia123";
+    console.log(akun["password"]);
+    //Study Case 4
+    console.warn("Study Case 4 : ");
+    //     1.Hapus harga dari mobil.
+    delete mobil.harga;
+    console.log(mobil);
+    // 2.Hapus alamat dari siswa.
+    delete siswa.alamat;
+    console.log(siswa);
+    // 3.Hapus makanan dari hewan.
+    delete hewan.makanan;
+    console.log(hewan);
+    // 4.Hapus genre dari film.
+    delete film.genre;
+    console.log(film);
+    // 5.Hapus email dari akun.
+    delete akun.email;
+    console.log(akun);
+    //Study Case 5
+    console.warn("Study Case 5 :");
+    //     1.Loop semua isi mobil.
+    for (let key in mobil) {
+        console.log(key + " : " + mobil[key]);
+    };
+    // 2.Loop semua isi siswa.
+    for (let key in siswa) {
+        console.log(key + " : " + siswa[key]);
+    };
+    // 3.Loop semua isi hewan.
+    for (let key in hewan) {
+        console.log(key + " : " + hewan[key]);
+    };
+    // 4.Loop semua isi film.
+    for (let key in film) {
+        console.log(key + " : " + film[key]);
+    };
+    // 5.Loop semua isi akun.
+    for (let key in akun) {
+        console.log(key + " : " + akun[key]);
+    };
+    //Study Case Besar
+    console.warn("Study Case Besar : Gabungkan semua");
+    // 1.Menyimpan judul, pengarang, tahunTerbit.
+    let bukuFavorit = {
+        judul: "Funiculi Funicula",
+        pengarang: "Toshikazu Kawaguchi",
+        tahunTerbit: 2015
+    };
+    // 2.Menambah properti penerbit.
+    bukuFavorit.penerbit = "Gramedia";
+    // 3.Mengubah tahunTerbit.
+    bukuFavorit.tahunTerbit = 2010;
+    // 4.Menghapus pengarang.
+    delete bukuFavorit.pengarang;
+    // 5.Menampilkan semua isi object.    
+    for (let key in bukuFavorit) {
+        console.log(key + " : " + bukuFavorit[key]);
+    };
+
+</script>
 
 </html>

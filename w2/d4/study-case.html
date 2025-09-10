@@ -5,10 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="study-case.css">
 </head>
 
 <body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
 
+    <main>
+        <section>
+            <article class="card">
+                <h2>Study Case 1</h2>
+                <pre>
+1.Ambil nilai dari array [10, 20, 30] jadi variabel x, y, z.
+2.Ambil nilai pertama dan kedua dari array ["apel", "jeruk", "mangga"].
+3.Ambil nilai pertama dan sisanya dari array [5, 6, 7, 8].
+4.Destructuring array [100, 200] jadi satu dan dua.
+5.Destructuring array [true, false, true] jadi t1, t2, t3.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 2</h2>
+                <pre>
+1.Destructuring object { nama: "Budi", umur: 17 }.
+2.Ambil judul dan pengarang dari object { judul: "Buku A", pengarang: "Andi" }.
+3.Ambil merk dari object { merk: "Honda", warna: "merah" }.
+4.Destructuring { username: "danz", password: "123" }.
+5.Ambil nama dan kelas dari { nama: "Siti", kelas: "XI" }.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 3</h2>
+                <pre>
+1.Gabungkan [1, 2] dengan [3, 4].
+2.Copy array [10, 20, 30] ke array baru.
+3.Gabungkan object { a: 1 } dengan { b: 2 }.
+4.Spread array [5, 6, 7] ke console.log.
+5.Gabungkan array ["a", "b"] dan ["c", "d"].
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 4</h2>
+                <pre>
+1.Buat function tambah yang bisa nerima banyak angka.
+2.Buat function cetak yang nerima banyak string dan print satu-satu.
+3.Buat function kalikan semua angka yang masuk.
+4.Buat function gabungKalimat yang nerima banyak kata jadi 1 kalimat.
+5.Buat destructuring array [1,2,3,4,5] jadi awal dan ...sisa.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case Besar</h2>
+                <pre>
+1.Object { nama: "Dewi", umur: 16, kelas: "XI" }.
+2.Pisahkan nama dan kelas dengan destructuring.
+3.Tambahkan properti baru hobi pakai spread.
+4.Buat function yang menerima nilai ujian (banyak angka) lalu hitung totalnya dengan rest.
+5.Tampilkan hasil akhir ke console.
+</pre>
+            </article>
+    </main>
+
+    <footer>
+        <small>AA72 at your service, Master.</small>
+    </footer>
 </body>
+
+<script>
+    //Study Case 1
+    console.warn("Study Case 1");
+    // 1.Ambil nilai dari array [10, 20, 30] jadi variabel x, y, z.
+    let array1 = [10, 20, 30];
+    let [x, y, z] = array1;
+    console.log(x, y, z)
+    // 2.Ambil nilai pertama dan kedua dari array ["apel", "jeruk", "mangga"].
+    let array2 = ["apel", "jeruk", "mangga"];
+    let [nilai1, nilai2] = array2;
+    console.log(nilai1, nilai2)
+    // 3.Ambil nilai pertama dan sisanya dari array [5, 6, 7, 8].
+    let array3 = [5, 6, 7, 8];
+    let [nilai1Ke2, ...nila2Ke2] = array3;
+    console.log(nilai1Ke2);
+    console.log(nila2Ke2);
+    // 4.Destructuring array [100, 200] jadi satu dan dua.
+    let array4 = [100, 200];
+    let [satu, dua] = array4;
+    console.log(satu);
+    console.log(dua);
+    // 5.Destructuring array [true, false, true] jadi t1, t2, t3.
+    let array5 = [true, false, true];
+    let [t1, t2, t3] = array5;
+    //Study Case 2
+    console.warn("Study Case 2 :");
+    //1.Destructuring object { nama: "Budi", umur: 17 }.
+    let object1 = { nama: "Budi", umur: 17 };
+    let { nama, umur } = object1;
+    console.log(nama);
+    console.log(umur);
+    // 2.Ambil judul dan pengarang dari object { judul: "Buku A", pengarang: "Andi" }.
+    let object2 = { judul: "Buku A", pengarang: "Andi" };
+    let { judul, pengarang } = object2;
+    console.log(judul);
+    console.log(pengarang);
+    // 3.Ambil merk dari object { merk: "Honda", warna: "merah" }.
+    let object3 = { merk: "Honda", warna: "merah" };
+    let { merk } = object3;
+    console.log(merk);
+    // 4.Destructuring { username: "danz", password: "123" }.
+    let object4 = { username: "danz", password: "123" };
+    let { username, password } = object4;
+    console.log(username);
+    console.log(password);
+    // 5.Ambil nama dan kelas dari { nama: "Siti", kelas: "XI" }.
+    let object5 = { nama2: "Siti", kelas: "XI" };
+    let { nama2, kelas } = object5;
+    console.log(nama2);
+    console.log(kelas);
+    //Study Case 3
+    console.warn("Study Case 3 : ")
+    // 1.Gabungkan [1, 2] dengan [3, 4].
+    let a = [1, 2];
+    let b = [3, 4];
+    let gabung = [...a, ...b];
+    console.log(gabung);
+    // 2.Copy array [10, 20, 30] ke array baru.
+    let copy = [...array1];
+    console.log(copy);
+    // 3.Gabungkan object { a: 1 } dengan { b: 2 }.
+    let oA = { a: 1 };
+    let oB = { b: 2 };
+    let oC = { ...oA, ...oB };
+    console.log(oC);
+    // 4.Spread array [5, 6, 7] ke console.log.
+    let arr = [5, 6, 7];
+    console.log(...arr);
+    // 5.Gabungkan array ["a", "b"] dan ["c", "d"].
+    let j = ["a", "b"];
+    let k = ["c", "d"];
+    let all = [...j, ...k];
+    console.log(all);
+    //Study Case 4
+    console.warn("Study Case 4");
+    // 1.Buat function tambah yang bisa nerima banyak angka.
+    function tambah(...angka) {
+        return angka.reduce((s, n) => s + n, 0);
+    }
+    console.log(tambah(1, 2, 3));
+    console.log(tambah(5, 10));
+    // 2.Buat function cetak yang nerima banyak string dan print satu-satu.
+    function cetak(...string) {
+        return string.forEach((k, i) => {
+            console.log(`${i + 1}. ${k}`);
+        })
+    }
+    cetak("halo", "selamat", "pagi");
+    // 3.Buat function kalikan semua angka yang masuk.
+    function kali(...angka) {
+        return angka.reduce((s, n) => s * n, 0);
+    }
+    console.log(kali(1, 2, 3, 4))
+    console.log(kali(5, 4, 6))
+    // 4.Buat function gabungKalimat yang nerima banyak kata jadi 1 kalimat.
+    function gabungKalimat(...kata) {
+        return kata.join(" ");
+    }
+    console.log(gabungKalimat("Saya", "sedang", "belajar", "Javascript"))
+    // 5.Buat destructuring array [1,2,3,4,5] jadi awal dan ...sisa.
+    let arr5 = [1, 2, 3, 4, 5];
+    let [awal5, ...sisa5] = arr5;
+    console.log(awal5);
+    console.log(sisa5);
+    //Study Case Besar
+    console.warn("Study Case Besar");
+    // 1.Object { nama: "Dewi", umur: 16, kelas: "XI" }.
+    let object = { nama1: "Dewi", umur: 16, kelas1: "XI" };
+    // 2.Pisahkan nama dan kelas dengan destructuring.
+    let { nama1, kelas1 } = object;
+    // 3.Tambahkan properti baru hobi pakai spread.
+    let objectBaru = { ...object, hobi: "menulis" }
+    // 4.Buat function yang menerima nilai ujian (banyak angka) lalu hitung totalnya dengan rest.
+    function masukkanNilai(...nilai) {
+        return nilai.reduce((a, b) => a + b, 0)
+    }
+    // 5.Tampilkan hasil akhir ke console.
+    console.log("Nama:", nama1);
+    console.log("Kelas:", kelas1);
+    console.log("Data Lengkap:", objectBaru);
+    console.log("Total Nilai:", masukkanNilai(80, 90, 70));
+</script>
 
 </html>

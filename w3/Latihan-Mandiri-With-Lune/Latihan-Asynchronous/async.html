@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Asynchronous JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #output {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            min-height: 150px;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Demo Asynchronous JavaScript</h1>
+    <div class="btn-container">
+        <button onclick="demoTimeout()">setTimeout</button>
+        <button onclick="demoInterval()">setInterval</button>
+        <button onclick="demoPromise()">Promise</button>
+        <button onclick="demoAsync()">async/await</button>
+        <button onclick="demoAll()">Promise.all</button>
+        <button onclick="demoRace()">Promise.race</button>
+        <button onclick="demoError()">Error async</button>
+        <button onclick="demoLoop()">Event loop</button>
+    </div>
+    <div id="output">[Output akan muncul di sini]</div>
+
+    <script>
+        const out = document.getElementById("output");
+        function log(msg) {
+            out.innerText += msg + "\n";
+        }
+        function clearOut() {
+            out.innerText = "";
+        }
+
+        // 1. setTimeout
+        function demoTimeout() {
+            clearOut();
+            log("=== setTimeout ===");
+            log("mulai");
+            setTimeout(() => log("halo setelah 2 detik"), 2000);
+            log("selesai (langsung)");
+        }
+
+        // 2. setInterval
+        function demoInterval() {
+            clearOut();
+            log("=== setInterval ===");
+            let i = 1;
+            let interval = setInterval(() => {
+                log("detik ke-" + i);
+                i++;
+                if (i > 3) clearInterval(interval);
+            }, 1000);
+        }
+
+        // 3. Promise dasar
+        function demoPromise() {
+            clearOut();
+            log("=== Promise dasar ===");
+            function cekAngka(n) {
+                return new Promise((resolve, reject) => {
+                    if (n % 2 === 0) resolve("Genap");
+                    else reject("Ganjil");
+                });
+            }
+            cekAngka(4).then(r => log("then: " + r))
+                .catch(e => log("catch: " + e));
+        }
+
+        // 4. async/await
+        function demoAsync() {
+            clearOut();
+            log("=== async/await ===");
+            function delay(ms) {
+                return new Promise(resolve => setTimeout(() => resolve(ms), ms));
+            }
+            async function run() {
+                log("mulai");
+                let hasil = await delay(1000);
+                log("tunggu 1 detik, hasil = " + hasil);
+                log("selesai");
+            }
+            run();
+        }
+
+        // 5. Promise.all
+        function demoAll() {
+            clearOut();
+            log("=== Promise.all ===");
+            function delay(ms, label) {
+                return new Promise(res => setTimeout(() => res(label), ms));
+            }
+            let p1 = delay(500, "A");
+            let p2 = delay(800, "B");
+            Promise.all([p1, p2]).then(r => log("all selesai: " + r.join(", ")));
+        }
+
+        // 6. Promise.race
+        function demoRace() {
+            clearOut();
+            log("=== Promise.race ===");
+            function delay(ms, label) {
+                return new Promise(res => setTimeout(() => res(label), ms));
+            }
+            Promise.race([delay(300, "Cepat"), delay(600, "Lambat")])
+                .then(w => log("pemenang race: " + w));
+        }
+
+        // 7. Error async/await
+        function demoError() {
+            clearOut();
+            log("=== Error handling ===");
+            async function run() {
+                try {
+                    let r = await new Promise((res, rej) => rej("ada error"));
+                    log(r);
+                } catch (e) {
+                    log("tertangkap error: " + e);
+                }
+            }
+            run();
+        }
+
+        // 8. Event loop
+        function demoLoop() {
+            clearOut();
+            log("=== Event loop demo ===");
+            log("start");
+            setTimeout(() => log("timeout 0"), 0);
+            Promise.resolve().then(() => log("promise microtask"));
+            log("end");
+        }
+    </script>
+</body>
+
+</html>

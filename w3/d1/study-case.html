@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="study-case.css">
+</head>
+
+<body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <h2>Study Case 1</h2>
+                <pre>
+1.Bangun Datar
+
+    File persegi.js: fungsi luas persegi (sisi * sisi).
+    File lingkaran.js: fungsi luas lingkaran (π * r * r).
+    File main.js: import keduanya dan tampilkan hasil.
+2.Pengolahan String
+
+    File teks.js: fungsi besar(teks) → ubah semua huruf ke huruf besar.
+    File main.js: pakai fungsi besar("belajar modular").
+3.Waktu
+
+    File waktu.js: fungsi jamSekarang() → return jam saat ini (new Date().toLocaleTimeString()).
+    File main.js: import dan tampilkan jam sekarang.
+4.Salam Default
+
+    File salam.js: export default fungsi sapa(nama) → return "Halo, nama!".
+    File main.js: panggil dengan nama bebas.
+5.Utility Campuran
+
+    File utils.js: default export fungsi versi() dan named export hitung(a, b).
+    File main.js: import keduanya dan tampilkan.
+</pre>
+            </article>
+            <article class="card">
+                <h2>Study Case 2</h2>
+                <pre>
+1.Alarm
+
+    Pakai setTimeout buat cetak "Bangun!" setelah 5 detik.
+2.Jam Dinding
+
+    Pakai setInterval untuk cetak jam sekarang setiap detik.
+3.Loading Screen
+
+    Cetak "Loading..." setiap detik, tapi berhenti setelah 5 detik.
+4.Cek Nomor (Promise)
+
+    Bikin cekNomor(n) → kalau genap resolve("Genap"), kalau ganjil reject("Ganjil").
+5.Data Palsu (async/await)
+
+    Fungsi ambilUser() yang pura-puranya ambil data setelah 3 detik.
+    Cetak "Data User: Budi" setelah selesai.
+</pre>
+            </article>
+    </main>
+</body>
+<script>
+    console.warn("Study Case 1 dan 2:")
+</script>
+<script type="module" src="study-case-js-files/main.js"></script>
+<script>
+    //     1.Alarm
+
+    //     Pakai setTimeout buat cetak "Bangun!" setelah 5 detik.
+    setTimeout(() => {
+        console.log("Bangun!");
+    }, 5000);
+    // 2.Jam Dinding
+
+    //     Pakai setInterval untuk cetak jam sekarang setiap detik.
+    setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+    }, 1000);
+    // 3.Loading Screen
+
+    //     Cetak "Loading..." setiap detik, tapi berhenti setelah 5 detik.
+    let detik = 0;
+    let load = setInterval(() => {
+        detik++;
+        console.log("Loading...");
+        if (detik === 5) clearInterval(load);
+    }, 1000);
+
+    // 4.Cek Nomor (Promise)
+
+    //     Bikin cekNomor(n) → kalau genap resolve("Genap"), kalau ganjil reject("Ganjil").
+    function cekAngka(n) {
+        return new Promise((resolve, reject) => {
+            if (n % 2 === 0) resolve("Genap");
+            else reject("Ganjil");
+        });
+    }
+
+    cekAngka(4).then(res => console.log(res)).catch(err => console.log(err));
+    cekAngka(5).then(res => console.log(res)).catch(err => console.log(err));
+    // 5.Data Palsu (async/await)
+
+    //     Fungsi ambilUser() yang pura-puranya ambil data setelah 3 detik.
+    //     Cetak "Data User: Budi" setelah selesai.
+    function ambilUser() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Data User: Budi");
+            }, 3000);
+        });
+    }
+
+    async function main() {
+        let hasil = await ambilUser();
+        console.log(hasil);
+    }
+    main();
+
+
+</script>
+
+
+</html>

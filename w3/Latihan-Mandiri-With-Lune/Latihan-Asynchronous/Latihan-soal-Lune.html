@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Asynchronous JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f6f9;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .soal {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .clue {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Latihan Asynchronous JavaScript</h1>
+    <h2>Soal made by : Unit L_00-N47</h2>
+
+    <div class="soal">
+        <h3>Soal 1: setTimeout</h3>
+        <p>Buat kode yang menampilkan <code>"Halo setelah 3 detik"</code> menggunakan <code>setTimeout</code>.</p>
+        <span class="clue">Clue: gunakan <code>setTimeout(() => {...}, 3000)</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 2: setInterval</h3>
+        <p>Tampilkan tulisan <code>"Detik ke-1", "Detik ke-2"</code> dan berhenti setelah 5 detik.</p>
+        <span class="clue">Clue: simpan hasil <code>setInterval</code> ke variabel, lalu hentikan dengan
+            <code>clearInterval</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 3: Promise</h3>
+        <p>Buat Promise yang mengecek apakah sebuah angka genap atau ganjil.</p>
+        <span class="clue">Clue: gunakan <code>resolve("Genap")</code> atau <code>reject("Ganjil")</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 4: async/await</h3>
+        <p>Tulis function async yang menunggu 2 detik lalu mengembalikan <code>"Selesai"</code>.</p>
+        <span class="clue">Clue: buat helper <code>delay()</code> dengan Promise, lalu gunakan
+            <code>await</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 5: Promise.all</h3>
+        <p>Buat dua Promise (1 detik dan 2 detik), lalu tunggu keduanya selesai, kemudian tampilkan hasil gabungan.</p>
+        <span class="clue">Clue: gunakan <code>Promise.all([ ... ])</code> lalu <code>.then()</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 6: Promise.race</h3>
+        <p>Buat dua Promise dengan waktu berbeda, lalu tampilkan yang paling cepat selesai.</p>
+        <span class="clue">Clue: gunakan <code>Promise.race([ ... ])</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 7: Error Handling</h3>
+        <p>Buat fungsi async yang memanggil Promise gagal, lalu tangkap error dengan try/catch.</p>
+        <span class="clue">Clue: gunakan <code>reject("error")</code> di Promise, lalu
+            <code>try { ... } catch(e) { ... }</code>.</span>
+    </div>
+
+    <div class="soal">
+        <h3>Soal 8: Event Loop</h3>
+        <p>Buat kode yang menampilkan urutan <code>"start"</code>, <code>"end"</code>, <code>"promise"</code>,
+            <code>"timeout"</code>.
+        </p>
+        <span class="clue">Clue: gunakan kombinasi <code>console.log</code>, <code>Promise.resolve().then()</code>, dan
+            <code>setTimeout(..., 0)</code>.</span>
+    </div>
+    <script>
+        //JAWABAN
+        // nomor 1
+        setTimeout(() => {
+            console.log("Halo setelah 3 detik")
+        }, 3000);
+        //nomor 2
+        let detikInterval = 1;
+        let soalInterval = setInterval(() => {
+            console.log("detik ke-" + detikInterval);
+            detikInterval++;
+            if (detikInterval > 5) clearInterval(soalInterval);
+        }, 1000);
+        //nomor 3
+        function cekAngka(angka) {
+            return new Promise((resolve, reject) => {
+                if (angka % 2 === 0) resolve("Genap");
+                else reject("Ganjil");
+            });
+        }
+        cekAngka(5).then(res => console.log("Angka :", res)).catch(err => console.log("Angka :", err));
+        //nomor 4
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(() => resolve(ms), ms));
+        }
+        async function done() {
+            console.log("Mulai")
+            console.log("tunggu 2 detik");
+            let detik = await delay(2000);
+            console.log("selesai");
+        }
+        done()
+        //nomor 5
+        let p1 = delay(1000).then(() => "1 Detik");
+        let p2 = delay(2000).then(() => "2 Detik");
+        Promise.all([p1, p2]).then(a => console.log("all selesai:", a));
+        //nomor 6
+        let p3 = delay(1000).then(() => "Cepat");
+        let p4 = delay(2000).then(() => "Lambat");
+        Promise.race([p3, p4]).then(w => console.log("pemenang race:", w));
+        //nomor 7
+        async function testError() {
+            try {
+                let r = await new Promise((res, rej) => rej("ada error"));
+                console.log(r);
+            } catch (e) {
+                console.log("tertangkap error:", e);
+            }
+        }
+        testError();
+        //nomor 8
+        console.log("start");
+        setTimeout(() => console.log("timeout"), 0);
+        Promise.resolve().then(() => console.log("promise"));
+        console.log("end");
+    </script>
+</body>
+
+</html>

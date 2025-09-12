@@ -277,6 +277,13 @@ section::before {
     z-index: 0;
 }
 
+#tugastambahan::before {
+    background-image: url("/assets/aa72-background.png");
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    background-size: cover;
+}
+
 #minggu1::before {
     background-image: url("/assets/aa72-background.png");
     background-repeat: no-repeat;

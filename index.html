@@ -22,6 +22,27 @@
     </header>
 
     <main>
+        <section id="tugastambahan">
+            <h2>Tugas Gabungan</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" onclick="scrollContainer('minggu1', -1)">◀</button>
+                <div class="day-container">
+                    <div class="day-card">
+                        <h3>Tugas 1</h3>
+                        <a href="tambahan/tugas-1/tugas-tambahan.html" target="_blank">Click Here!</a>
+                    </div>
+                    <div class="day-card">
+                        <h3>Tugas 2</h3>
+                        <a href="tambahan/tugas-2/tugas-tambahan-2.html" target="_blank">Click Here!</a>
+                    </div>
+                    <div class="day-card">
+                        <h3>Tugas 3</h3>
+                        <a href="tambahan/tugas-3_warungMaju/tugas-tambahan-3.html" target="_blank">Click Here!</a>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollContainer('minggu1', 1)">▶</button>
+            </div>
+        </section>
         <!-- Minggu 1 -->
         <section id="minggu1">
             <h2>Minggu 1</h2>
@@ -141,17 +162,27 @@
 
         <!-- Minggu 3 -->
         <section id="minggu3">
-            <h2>Minggu 3 (NotyetAvailable)</h2>
+            <h2>Minggu 3</h2>
             <div class="scroll-wrapper">
                 <button class="scroll-btn left" onclick="scrollContainer('minggu3', -1)">◀</button>
                 <div class="day-container">
-
+                    <div class="day-card">
+                        <h3> Kompilasi Latihan Mandiri</h3>
+                        <div class="task-list">
+                            <a href="w3/Latihan-Mandiri-With-Lune/Latihan-Asynchronous/async.html"
+                                target="_blank">Latihan
+                                Asynchronous</a>
+                            <a href="w3/Latihan-Mandiri-With-Lune/Latihan-Asynchronous/Latihan-soal-Lune.html"
+                                target="_blank">Latihan
+                                soal Asynchronous</a>
+                        </div>
+                    </div>
                     <div class="day-card">
                         <h3> Hari 1</h3>
                         <div class="task-list">
                             <a href="">Tugas Harian</a>
                             <a href="">Latihan Praktek</a>
-                            <a href="">Studi Kasus</a>
+                            <a href="w3/d1/study-case.html">Studi Kasus</a>
                         </div>
                     </div>
                     <div class="day-card">
@@ -259,7 +290,6 @@
             section.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
         }
     </script>
-
 </body>
 
 </html>

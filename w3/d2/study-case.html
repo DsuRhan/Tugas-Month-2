@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="study-case.css">
+</head>
+
+<body>
+    <div class="aa72-bg"></div>
+    <header>
+        <h1>Study Case - JavaScript</h1>
+        <p>Silakan buka console untuk melihat output</p>
+    </header>
+
+    <main>
+        <section>
+            <article class="card">
+                <h2>Study Case 1</h2>
+                <pre>
+Tugas:
+Buat halaman HTML sederhana yang menampilkan daftar produk.
+
+🔹 Skenario:
+Data produk (misalnya: nama, harga, stok) disimpan di localStorage dalam bentuk JSON.
+Saat halaman dibuka, data dibaca dan ditampilkan di web.
+</pre>
+                <h2>Produk Warung</h2>
+                <ul id="list-produk"></ul>
+            </article>
+    </main>
+</body>
+<script>
+    let dataAwal = [
+        { "nama": "Laptop", "harga": 7000000, "stok": 5 },
+        { "nama": "HP", "harga": 3000000, "stok": 10 },
+        { "nama": "Headset", "harga": 200000, "stok": 15 }
+    ];
+
+    if (!localStorage.getItem("produk")) {
+        localStorage.setItem("produk", JSON.stringify(dataAwal));
+    }
+
+    let data = JSON.parse(localStorage.getItem("produk"));
+    // Tampilkan di HTML
+    let list = document.getElementById("list-produk");
+    data.forEach(p => {
+        let li = document.createElement("li");
+        li.textContent = `${p.nama} - Rp${p.harga} (Stok: ${p.stok})`;
+        list.appendChild(li);
+    });
+</script>
+
+</html>

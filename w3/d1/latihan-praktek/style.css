@@ -1,0 +1,88 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: -99;
+}
+
+/* Container utama */
+#prayerTimes {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+/* Setiap baris jadwal */
+#prayerTimes>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Nama sholat */
+#prayerTimes .nama {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Waktu jadwal */
+#prayerTimes .jadwal {
+    font-family: monospace;
+}
+
+/* Baris terakhir tanpa border */
+#prayerTimes>div:last-child {
+    border-bottom: none;
+}
+
+#prayerTimes::after,
+#prayerTimes::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    background-image: conic-gradient(from var(--angle), red, green, blue, red);
+    border-radius: 10px;
+    animation: 3s rotaring linear infinite;
+}
+
+#prayerTimes::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotating {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}

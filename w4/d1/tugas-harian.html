@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Soal Day 17</title>
+<link rel="stylesheet" href="tugas-harian.css">
+</head>
+<body>
+
+<h1>Latihan DOM & Fetch – Day 17</h1>
+
+<!-- ================= Soal 1 ================= -->
+<h2>Soal 1</h2>
+<p id="p1">Teks awal</p>
+<script>
+  document.getElementById("p1").innerText = "Halo DOM!";
+</script>
+
+<!-- ================= Soal 2 ================= -->
+<h2>Soal 2</h2>
+<p class="paragraf">A</p>
+<p class="paragraf">B</p>
+<p class="paragraf">C</p>
+<script>
+  const coll = document.getElementsByClassName("paragraf");
+  for (const el of coll) el.style.color = "blue";
+</script>
+
+<!-- ================= Soal 3 ================= -->
+<h2>Soal 3</h2>
+<ul>
+  <li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li>
+</ul>
+<script>
+  const lis = document.getElementsByTagName("li");
+  for (let i = 0; i < lis.length; i++) lis[i].innerText += " - item";
+</script>
+
+<!-- ================= Soal 4 ================= -->
+<h2>Soal 4</h2>
+<img id="foto" src="old.jpg" alt="foto">
+<script>
+  document.querySelector("#foto").src = "https://www.google.com/imgres?q=firefly%20gif%20hsr&imgurl=https%3A%2F%2Fgiffiles.alphacoders.com%2F222%2F222613.gif&imgrefurl=https%3A%2F%2Fgifs.alphacoders.com%2Fgifs%2Fview%2F222613&docid=Jg77BFen-wRwqM&tbnid=MZ2nxJpXq8CmzM&vet=12ahUKEwjI0ZGAgOePAxUGR2wGHYIrKSMQM3oECCIQAA..i&w=356&h=474&hcb=2&ved=2ahUKEwjI0ZGAgOePAxUGR2wGHYIrKSMQM3oECCIQAA";
+</script>
+
+<!-- ================= Soal 5 ================= -->
+<h2>Soal 5</h2>
+<p class="teks"></p><p class="teks"></p><p class="teks"></p><p class="teks"></p>
+<script>
+  document.querySelectorAll(".teks").forEach((el, i) => el.innerText = `Teks ke-${i+1}`);
+</script>
+
+<!-- ================= Soal 6 ================= -->
+<h2>Soal 6</h2>
+<p id="ex">Awal</p>
+<script>
+  document.getElementById("ex").innerText = "Akhir";
+</script>
+
+<!-- ================= Soal 7 ================= -->
+<h2>Soal 7</h2>
+<p id="b">Belajar DOM</p>
+<script>
+  document.getElementById("b").innerHTML = "<strong>Belajar DOM</strong>";
+</script>
+
+<!-- ================= Soal 8 ================= -->
+<h2>Soal 8</h2>
+<div id="box"></div>
+<script>
+  document.getElementById("box").innerText = "Isi baru dari JS";
+</script>
+
+<!-- ================= Soal 9 ================= -->
+<h2>Soal 9</h2>
+<p id="hide">Sembunyikan saya</p>
+<script>
+  document.getElementById("hide").style.display = "none";
+</script>
+
+<!-- ================= Soal 10 ================= -->
+<h2>Soal 10</h2>
+<p id="show" style="display:none">Tampilkan saya</p>
+<script>
+  document.getElementById("show").style.display = "block";
+</script>
+
+<!-- ================= Soal 11 ================= -->
+<h2>Soal 11</h2>
+<p class="warna">Merah</p>
+<p class="warna">Hijau</p>
+<p class="warna">Biru</p>
+<script>
+  const warna = ["red","green","blue"];
+  document.querySelectorAll(".warna").forEach((el,i) => el.style.color = warna[i]);
+</script>
+
+<!-- ================= Soal 12 ================= -->
+<h2>Soal 12</h2>
+<div id="box2"></div>
+<script>
+  const box2 = document.getElementById("box2");
+  box2.style.width = "200px";
+  box2.style.height = "200px";
+  box2.style.background = "yellow";
+</script>
+
+<!-- ================= Soal 13 ================= -->
+<h2>Soal 13</h2>
+<a id="link">Klik Aku</a>
+<script>
+  const a = document.getElementById("link");
+  a.setAttribute("href","https://google.com");
+  a.setAttribute("target","_blank");
+</script>
+
+<!-- ================= Soal 14 ================= -->
+<h2>Soal 14</h2>
+<p id="p2">Paragraf A</p><p id="p2">Paragraf B</p><p id="p2">Paragraf C</p>
+<script>
+  document.querySelectorAll("#p2").forEach(p => p.innerText = p.innerText.toUpperCase());
+</script>
+
+<!-- ================= Soal 15 ================= -->
+<h2>Soal 15</h2>
+<p id="judul">Judul Lama</p>
+<script>
+  document.getElementById("judul").classList.add("highlight");
+</script>
+
+<!-- ================= Soal 16 ================= -->
+<h2>Soal 16</h2>
+<ul>
+  <li class="item">1</li><li class="item">2</li><li class="item">3</li><li class="item">4</li><li class="item">5</li>
+</ul>
+<script>
+  document.querySelectorAll(".item").forEach((el,i) => {
+    el.style.color = (i % 2 === 0) ? "red" : "blue";
+  });
+</script>
+
+<!-- ================= Soal 17 ================= -->
+<h2>Soal 17</h2>
+<img class="img"><img class="img"><img class="img">
+<script>
+  document.querySelectorAll(".img").forEach(img => img.src = "https://www.google.com/imgres?q=firefly%20gif%20hsr&imgurl=https%3A%2F%2Fgiffiles.alphacoders.com%2F222%2F222613.gif&imgrefurl=https%3A%2F%2Fgifs.alphacoders.com%2Fgifs%2Fview%2F222613&docid=Jg77BFen-wRwqM&tbnid=MZ2nxJpXq8CmzM&vet=12ahUKEwjI0ZGAgOePAxUGR2wGHYIrKSMQM3oECCIQAA..i&w=356&h=474&hcb=2&ved=2ahUKEwjI0ZGAgOePAxUGR2wGHYIrKSMQM3oECCIQAA");
+</script>
+
+<!-- ================= Soal 18 ================= -->
+<h2>Soal 18</h2>
+<p id="h">Hello</p>
+<script>
+  const p18 = document.getElementById("h");
+  p18.style.color = "white";
+  p18.style.background = "black";
+  p18.style.fontSize = "30px";
+</script>
+
+<!-- ================= Soal 19 ================= -->
+<h2>Soal 19</h2>
+<p id="namaSurat">--</p>
+<script>
+  // Versi async/await
+  async function loadSurat1(){
+    try{
+      const res = await fetch("https://equran.id/api/v2/surat/1");
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      document.getElementById("namaSurat").innerText = data.data.namaLatin;
+    } catch (err) {
+      document.getElementById("namaSurat").innerText = "Gagal: " + err.message;
+    }
+  }
+  loadSurat1();
+</script>
+
+<!-- ================= Soal 20 ================= -->
+<h2>Soal 20</h2>
+<ul id="listSurat"></ul>
+<script>
+  // Versi async/await
+  async function loadDaftarSurat(){
+    try{
+      const res = await fetch("https://equran.id/api/v2/surat");
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const list = document.getElementById("listSurat");
+      const firstFive = data.data.slice(0,5);
+      firstFive.forEach(s => {
+        const li = document.createElement("li");
+        li.innerText = s.namaLatin;
+        list.appendChild(li);
+      });
+    } catch (err) {
+      document.getElementById("listSurat").innerText = "Gagal: " + err.message;
+    }
+  }
+  loadDaftarSurat();
+</script>
+
+</body>
+</html>

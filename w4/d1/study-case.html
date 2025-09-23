@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Studi Kasus Event - Day 19</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #0b0f17;
+      color: #e0e0e0;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.3rem;
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      background: #1e88e5;
+      color: white;
+      cursor: pointer;
+    }
+    button:disabled {
+      background: #666;
+    }
+    input, form {
+      margin: 5px 0;
+      padding: 5px;
+    }
+    #area {
+      width:200px;
+      height:100px;
+      background:lightgray;
+      margin: 10px 0;
+    }
+    ul#list li {
+      cursor: pointer;
+      padding: 5px;
+      background: #222;
+      margin: 2px 0;
+      list-style: none;
+    }
+    .kal{
+        width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Studi Kasus Event (Day 19)</h1>
+
+  <!-- A. Inline Events -->
+  <h2>A. Inline Events</h2>
+  <p>1. Tombol dengan onclick:</p>
+  <button onclick="alert('Halo!')">Klik Saya</button>
+
+  <p>2. Gambar berubah saat diklik:</p>
+  <img class="kal"
+  src="assets/kaltsit-ケルシー-v0-4kbtlr3gjihf1.webp"
+       onclick="this.src='./assets/lain.jpg'">
+
+  <p>3. Paragraf double-click:</p>
+  <p ondblclick="this.innerText='Double clicked!'">Klik ganda saya</p>
+
+  <p>4. Input focus ubah placeholder:</p>
+  <input type="text" placeholder="Masukkan teks"
+         onfocus="this.placeholder='Tulis di sini...'">
+
+  <p>5. Tombol mousedown & mouseup:</p>
+  <button onmousedown="this.innerText='Mouse Down'"
+          onmouseup="this.innerText='Mouse Up'">Klik saya</button>
+
+  <!-- B. Assigning Event Properties -->
+  <h2>B. Assigning Event Properties</h2>
+  <p>6. Tombol ubah teks paragraf:</p>
+  <button id="btn">Klik</button>
+  <p id="msg"></p>
+
+  <p>7. Div mouseover & mouseout:</p>
+  <div id="area"></div>
+
+  <p>8. Input tampilkan ke span:</p>
+  <input id="inputText" type="text">
+  <span id="show"></span>
+
+  <p>9. Tombol disable setelah klik:</p>
+  <button id="onceBtn">Sekali Klik</button>
+
+  <p>10. Assign 2x onclick (lihat console):</p>
+  <button id="demo">Coba</button>
+
+  <!-- C. addEventListener() -->
+  <h2>C. addEventListener()</h2>
+  <p>11. Dua handler click:</p>
+  <button id="btn2">Klik Saya</button>
+
+  <p>12. Remove handler:</p>
+  <button id="btn3">Klik</button>
+  <button id="remove">Remove Handler</button>
+
+  <p>13. Form submit preventDefault:</p>
+  <form id="myForm">
+    <input type="text" name="nama" placeholder="Masukkan nama">
+    <button type="submit">Kirim</button>
+  </form>
+
+  <p>14. Event delegation pada list:</p>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <p>15. Once: true (klik sekali):</p>
+  <button id="once">Klik Sekali</button>
+
+  <script>
+    // 6. Tombol ubah teks paragraf
+    document.getElementById("btn").onclick = function() {
+      document.getElementById("msg").innerText = "Tombol ditekan!";
+    }
+
+    // 7. Div mouseover & mouseout
+    let area = document.getElementById("area");
+    area.onmouseover = () => area.style.backgroundColor = "lightblue";
+    area.onmouseout  = () => area.style.backgroundColor = "lightgray";
+
+    // 8. Input tampilkan ke span
+    let input = document.getElementById("inputText");
+    input.oninput = function() {
+      document.getElementById("show").innerText = this.value;
+    }
+
+    // 9. Tombol disable setelah klik
+    let btnOnce = document.getElementById("onceBtn");
+    btnOnce.onclick = function() {
+      this.disabled = true;
+      this.innerText = "Sudah diklik";
+    }
+
+    // 10. Assign 2x onclick
+    let d = document.getElementById("demo");
+    d.onclick = function() { console.log("Handler 1"); }
+    d.onclick = function() { console.log("Handler 2"); } // timpa
+
+    // 11. Dua handler click
+    let b2 = document.getElementById("btn2");
+    b2.addEventListener("click", () => {
+      b2.style.backgroundColor = "yellow";
+    });
+    b2.addEventListener("click", () => {
+      console.log("Tombol diklik");
+    });
+
+    // 12. Remove handler
+    function ubah() { console.log("Handler aktif!"); }
+    let b3 = document.getElementById("btn3");
+    b3.addEventListener("click", ubah);
+    document.getElementById("remove").addEventListener("click", () => {
+      b3.removeEventListener("click", ubah);
+      console.log("Handler dihapus");
+    });
+
+    // 13. Form submit preventDefault
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      console.log("Nama:", this.nama.value);
+    });
+
+    // 14. Event delegation pada list
+    document.getElementById("list").addEventListener("click", function(e) {
+      if (e.target.tagName === "LI") {
+        e.target.innerText = "Dipilih!";
+      }
+    });
+
+    // 15. Once: true
+    document.getElementById("once").addEventListener("click", () => {
+      console.log("Hanya sekali jalan!");
+    }, { once: true });
+  </script>
+</body>
+</html>

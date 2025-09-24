@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation Day 20</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #0b0f17;
+      color: #e0e0e0;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.3rem;
+    }
+    form {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #1a1f29;
+      border-radius: 6px;
+    }
+    input, select, button {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #444;
+    }
+    button {
+      background: #1e88e5;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1565c0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Validation Day 20</h1>
+
+  <h2>Soal 6–15: Validasi HTML</h2>
+
+  <!-- 6. Input nama wajib isi -->
+  <form>
+    <label>6. Nama (required)</label>
+    <input type="text" required>
+  </form>
+
+  <!-- 7. Usia 18–60 -->
+  <form>
+    <label>7. Usia (18–60)</label>
+    <input type="number" min="18" max="60">
+  </form>
+
+  <!-- 8. Password min 8 -->
+  <form>
+    <label>8. Password (min 8 karakter)</label>
+    <input type="password" minlength="8">
+  </form>
+
+  <!-- 9. Email -->
+  <form>
+    <label>9. Email</label>
+    <input type="email">
+  </form>
+
+  <!-- 10. Telepon 10–12 digit -->
+  <form>
+    <label>10. Telepon (10–12 digit)</label>
+    <input type="text" pattern="[0-9]{10,12}">
+  </form>
+
+  <!-- 11. Username huruf kecil -->
+  <form>
+    <label>11. Username (huruf kecil)</label>
+    <input type="text" pattern="[a-z]+">
+  </form>
+
+  <!-- 12. Kode pos 5 digit -->
+  <form>
+    <label>12. Kode Pos (5 digit)</label>
+    <input type="text" pattern="[0-9]{5}">
+  </form>
+
+  <!-- 13. Tanggal lahir sebelum 2020 -->
+  <form>
+    <label>13. Tanggal lahir (sebelum 2020)</label>
+    <input type="date" max="2019-12-31">
+  </form>
+
+  <!-- 14. URL -->
+  <form>
+    <label>14. URL</label>
+    <input type="url">
+  </form>
+
+  <!-- 15. Angka genap -->
+  <form>
+    <label>15. Angka genap</label>
+    <input type="text" pattern="(0|2|4|6|8)$">
+  </form>
+
+  <h2>Soal 16–30: Validasi JavaScript</h2>
+
+  <!-- 16. Nama wajib isi -->
+  <form id="f16">
+    <label>16. Nama wajib isi</label>
+    <input type="text" id="nama16">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 17. Usia ≥ 18 -->
+  <form id="f17">
+    <label>17. Usia (≥18)</label>
+    <input type="number" id="usia17">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 18. Password min 8 -->
+  <form id="f18">
+    <label>18. Password min 8</label>
+    <input type="password" id="pass18">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 19. Email regex -->
+  <form id="f19">
+    <label>19. Email valid</label>
+    <input type="text" id="email19">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 20. Nomor HP angka -->
+  <form id="f20">
+    <label>20. Nomor HP angka</label>
+    <input type="text" id="hp20">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 21. Password confirm -->
+  <form id="f21">
+    <label>21. Password</label>
+    <input type="password" id="p1">
+    <label>Confirm</label>
+    <input type="password" id="p2">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 22. Tanggal ≤ hari ini -->
+  <form id="f22">
+    <label>22. Tanggal</label>
+    <input type="date" id="tgl22">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 23. Username ≥ 5 huruf/angka -->
+  <form id="f23">
+    <label>23. Username</label>
+    <input type="text" id="user23">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 24. Login wajib isi semua -->
+  <form id="f24">
+    <label>24. Username</label>
+    <input type="text" id="user24">
+    <label>Password</label>
+    <input type="password" id="pass24">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 25. Checkbox setuju -->
+  <form id="f25">
+    <label><input type="checkbox" id="cek25"> Saya setuju</label>
+    <button>Kirim</button>
+  </form>
+
+  <!-- 26. Angka genap -->
+  <form id="f26">
+    <label>26. Angka</label>
+    <input type="number" id="angka26">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 27. Komentar max 200 -->
+  <form id="f27">
+    <label>27. Komentar</label>
+    <input type="text" id="komen27">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 28. Select wajib pilih -->
+  <form id="f28">
+    <label>28. Pilihan</label>
+    <select id="pilih28">
+      <option value="">--pilih--</option>
+      <option>A</option>
+      <option>B</option>
+    </select>
+    <button>Kirim</button>
+  </form>
+
+  <!-- 29. File .jpg/.png -->
+  <form id="f29">
+    <label>29. Upload File</label>
+    <input type="file" id="file29">
+    <button>Kirim</button>
+  </form>
+
+  <!-- 30. Semua field valid -->
+  <form id="f30">
+    <label>30. Nama</label>
+    <input type="text" id="nama30">
+    <label>Email</label>
+    <input type="text" id="email30">
+    <label>Password</label>
+    <input type="password" id="pass30">
+    <button>Kirim</button>
+  </form>
+
+  <script>
+    // 16
+    f16.onsubmit = e => {
+      e.preventDefault();
+      if (nama16.value === "") alert("Nama wajib diisi");
+    }
+
+    // 17
+    f17.onsubmit = e => {
+      e.preventDefault();
+      if (usia17.value < 18) alert("Usia minimal 18");
+    }
+
+    // 18
+    f18.onsubmit = e => {
+      e.preventDefault();
+      if (pass18.value.length < 8) alert("Password minimal 8");
+    }
+
+    // 19
+    f19.onsubmit = e => {
+      e.preventDefault();
+      let regex = /^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/;
+      if (!regex.test(email19.value)) alert("Email tidak valid");
+    }
+
+    // 20
+    f20.onsubmit = e => {
+      e.preventDefault();
+      if (isNaN(hp20.value)) alert("Nomor HP harus angka");
+    }
+
+    // 21
+    f21.onsubmit = e => {
+      e.preventDefault();
+      if (p1.value !== p2.value) alert("Password tidak sama");
+    }
+
+    // 22
+    f22.onsubmit = e => {
+      e.preventDefault();
+      if (new Date(tgl22.value) > new Date()) alert("Tanggal tidak boleh lebih dari hari ini");
+    }
+
+    // 23
+    f23.onsubmit = e => {
+      e.preventDefault();
+      let userRegex = /^[a-zA-Z0-9]{5,}$/;
+      if (!userRegex.test(user23.value)) alert("Username tidak valid");
+    }
+
+    // 24
+    f24.onsubmit = e => {
+      e.preventDefault();
+      if (!user24.value || !pass24.value) alert("Isi semua field");
+    }
+
+    // 25
+    f25.onsubmit = e => {
+      e.preventDefault();
+      if (!cek25.checked) alert("Harus setuju sebelum lanjut");
+    }
+
+    // 26
+    f26.onsubmit = e => {
+      e.preventDefault();
+      if (angka26.value % 2 !== 0) alert("Harus bilangan genap");
+    }
+
+    // 27
+    f27.onsubmit = e => {
+      e.preventDefault();
+      if (komen27.value.length > 200) alert("Komentar maksimal 200 karakter");
+    }
+
+    // 28
+    f28.onsubmit = e => {
+      e.preventDefault();
+      if (pilih28.value === "") alert("Pilih salah satu");
+    }
+
+    // 29
+    f29.onsubmit = e => {
+      e.preventDefault();
+      if (!(file29.value.endsWith(".jpg") || file29.value.endsWith(".png"))) {
+        alert("File harus .jpg atau .png");
+      }
+    }
+
+    // 30
+    f30.onsubmit = e => {
+      e.preventDefault();
+      let regexEmail = /^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/;
+      if (!nama30.value || !regexEmail.test(email30.value) || pass30.value.length < 8) {
+        alert("Semua field harus valid");
+      } else {
+        alert("Sukses");
+      }
+    }
+  </script>
+</body>
+</html>

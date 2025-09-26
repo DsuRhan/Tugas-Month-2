@@ -23,7 +23,7 @@ function tambahTodo() {
 function tampilkanTodo(todo) {
   const list = document.getElementById("todoList");
   const item = document.createElement("li");
-  item.classList.add(todo.priority);
+  item.classList.add(todo.priority, "slide-in"); // tambah animasi masuk
 
   // Info teks + deadline
   const infoDiv = document.createElement("div");
@@ -34,8 +34,12 @@ function tampilkanTodo(todo) {
   const delBtn = document.createElement("button");
   delBtn.textContent = "Hapus";
   delBtn.onclick = function () {
-    list.removeChild(item);
-    hapusTodo(todo);
+    // animasi fade out sebelum dihapus
+    item.classList.add("fade-out");
+    item.addEventListener("animationend", () => {
+      list.removeChild(item);
+      hapusTodo(todo);
+    });
   };
 
   // Tombol edit
@@ -50,6 +54,7 @@ function tampilkanTodo(todo) {
   item.appendChild(delBtn);
   list.appendChild(item);
 }
+
 
 function simpanTodo(todo) {
   const todos = JSON.parse(localStorage.getItem("todos")) || [];
